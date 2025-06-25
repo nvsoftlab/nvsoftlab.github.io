@@ -14,6 +14,8 @@ import {
 import { Card, CardContent } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
+import tikTokIcon from "../../src/assets/tiktok.png";
+import diceIcon from "../../src/assets/dice.png";
 
 export default function Home() {
   const comingSoonApps = [
@@ -109,7 +111,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <img
-                src="../../src/assets/tiktok.png"
+                src={tikTokIcon}
                 alt="TikTok Icon"
                 className="h-6 w-6 object-contain"
               />{" "}
@@ -155,9 +157,8 @@ export default function Home() {
 
                 <div className="relative z-10">
                   <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {/* Replaced dice emoji with placeholder image */}
                     <img
-                      src="src/assets/dice.png"
+                      src={diceIcon}
                       alt="Dice Icon"
                       className="w-10 h-10 object-contain"
                     />
@@ -346,7 +347,7 @@ export default function Home() {
               className="flex items-center gap-2 bg-slate-800 text-white px-6 py-3 rounded-full hover:bg-slate-900 transition-all duration-300 font-medium"
             >
               <img
-                src="../../src/assets/tiktok.png"
+                src={tikTokIcon}
                 alt="TikTok Icon"
                 className="h-6 w-6 object-contain"
               />

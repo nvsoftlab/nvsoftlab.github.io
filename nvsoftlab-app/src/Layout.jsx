@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "./utils";
 import { Home } from "lucide-react";
+import nvSoftLabIcon from "../public/favicon.png";
 
 export default function Layout({ children, currentPageName }) {
   return (
@@ -14,7 +15,7 @@ export default function Layout({ children, currentPageName }) {
               className="flex items-center gap-3 group transition-all duration-300"
             >
               <img
-                src="public/favicon.png"
+                src={nvSoftLabIcon}
                 alt="NVSoftLab Logo"
                 className="w-12 h-12 object-contain group-hover:scale-105 transition-transform duration-300"
               />

@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 import { Button } from "../components/ui/button";
+import diceIcon from "../assets/dice.png";
 
 export default function DiceRoll() {
   const features = [
@@ -184,14 +185,18 @@ export default function DiceRoll() {
         <Card className="bg-gradient-to-br from-teal-600 to-purple-700 border-0 shadow-2xl overflow-hidden">
           <CardContent className="p-12 text-center text-white">
             <div className="max-w-2xl mx-auto">
-              <div className="text-8xl mb-6">🎲</div>
+              <img
+                src={diceIcon}
+                alt="Dice Icon"
+                className="w-32 h-32 object-contain mx-auto mb-6"
+              />
               <h3 className="text-2xl font-bold mb-4">
                 Beautiful Dice Animation
               </h3>
               <p className="text-teal-100 text-lg leading-relaxed">
-                Experience the most realistic dice rolling on your mobile
-                device. Watch as your dice tumble and roll with stunning physics
-                simulation.
+                Experience captivating dice rolls on your mobile device. Watch
+                your dice animate effortlessly, delivering clear and satisfying
+                results for every game.
               </p>
             </div>
           </CardContent>
@@ -280,7 +285,7 @@ export default function DiceRoll() {
           Loved by Users Worldwide
         </h2>
 
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-4 gap-8 ">
           <div className="text-center">
             <div className="flex items-center justify-center gap-1 mb-2">
               {[...Array(5)].map((_, i) => (
