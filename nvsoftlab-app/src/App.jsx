@@ -1,14 +1,21 @@
-import React from "react";
 import {
+  Route,
   BrowserRouter as Router,
   Routes,
-  Route,
   useLocation,
 } from "react-router-dom";
-import Layout from "./Layout";
-import Home from "./pages/Home";
+
 import DiceRoll from "./pages/DiceRoll";
+import Home from "./pages/Home";
+import Layout from "./Layout";
+import TagManager from 'react-gtm-module';
 import { createPageUrl } from "./utils";
+
+const tagManagerArgs = {
+  gtmId: 'GTM-WBJFJT34' 
+};
+TagManager.initialize(tagManagerArgs);
+
 
 function LayoutWithLocation({ children }) {
   const location = useLocation();
