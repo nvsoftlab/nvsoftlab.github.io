@@ -10,11 +10,13 @@ import Home from "./pages/Home";
 import Layout from "./Layout";
 import TagManager from 'react-gtm-module';
 import { createPageUrl } from "./utils";
+import useUTMTracking from "./hooks/useUTMTracking";
 
 const tagManagerArgs = {
-  gtmId: 'GTM-WBJFJT34' 
+  gtmId: 'GTM-WBJFJT34'
 };
 TagManager.initialize(tagManagerArgs);
+
 
 
 function LayoutWithLocation({ children }) {
@@ -30,6 +32,8 @@ function LayoutWithLocation({ children }) {
 }
 
 export default function App() {
+  useUTMTracking();
+
   return (
     <Router>
       <LayoutWithLocation>
