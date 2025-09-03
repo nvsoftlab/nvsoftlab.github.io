@@ -168,17 +168,17 @@ export default function DiceRoll() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-slate-600 text-sm sm:text-base">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 fill-current" />
             <span className="font-semibold">4.8/5</span>
           </div>
           <div className="hidden sm:block w-px h-4 bg-slate-300"></div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <Download className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />
             <span className="font-semibold">2K+ Downloads</span>
           </div>
           <div className="hidden sm:block w-px h-4 bg-slate-300"></div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <Smartphone className="w-4 h-4 sm:w-5 sm:h-5 text-teal-500" />
             <span className="font-semibold">iOS & Android</span>
           </div>

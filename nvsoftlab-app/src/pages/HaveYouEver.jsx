@@ -1,10 +1,15 @@
 import {
   ArrowLeft,
+  Car,
+  Coffee,
   Download,
   ExternalLink,
   Gamepad2,
+  GraduationCap,
   Heart,
+  Home,
   MessageCircle,
+  PartyPopper,
   Settings,
   Smartphone,
   Sparkles,
@@ -59,6 +64,15 @@ export default function HaveYouEver() {
       description: "Generate new questions with AI for fresh content anytime",
       color: "from-teal-500 to-blue-500",
     },
+  ];
+
+  const perfectFor = [
+    { icon: <PartyPopper className="w-5 h-5 sm:w-6 sm:h-6" />, text: "Birthday parties and celebrations" },
+    { icon: <Coffee className="w-5 h-5 sm:w-6 sm:h-6" />, text: "Coffee dates and casual meetups" },
+    { icon: <Heart className="w-5 h-5 sm:w-6 sm:h-6" />, text: "Romantic date nights for couples" },
+    { icon: <Car className="w-5 h-5 sm:w-6 sm:h-6" />, text: "Road trips and travel entertainment" },
+    { icon: <Home className="w-5 h-5 sm:w-6 sm:h-6" />, text: "Family game nights and bonding" },
+    { icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />, text: "Team building and icebreakers" },
   ];
 
   return (
@@ -133,17 +147,17 @@ export default function HaveYouEver() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-slate-600 text-sm sm:text-base">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 fill-current" />
             <span className="font-semibold">4.9/5</span>
           </div>
           <div className="hidden sm:block w-px h-4 bg-slate-300"></div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <Download className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />
             <span className="font-semibold">30+ Categories</span>
           </div>
           <div className="hidden sm:block w-px h-4 bg-slate-300"></div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <Smartphone className="w-4 h-4 sm:w-5 sm:h-5 text-pink-500" />
             <span className="font-semibold">iOS & Android</span>
           </div>
@@ -186,6 +200,36 @@ export default function HaveYouEver() {
           ))}
         </div>
       </div>
+
+      {/* Perfect For Section */}
+      <div className="mb-16 sm:mb-20">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
+            🎯 Perfect For
+          </h2>
+          <p className="text-base sm:text-lg text-slate-600">
+            Have You Ever is the perfect game for any occasion!
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {perfectFor.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-3 sm:gap-4 bg-white/60 backdrop-blur-sm p-4 sm:p-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group"
+            >
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-pink-100 to-purple-100 rounded-lg flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                {item.icon}
+              </div>
+              <p className="text-slate-700 font-medium text-sm sm:text-base">
+                {item.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
 
       {/* Download Section */}
       <div className="text-center bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
