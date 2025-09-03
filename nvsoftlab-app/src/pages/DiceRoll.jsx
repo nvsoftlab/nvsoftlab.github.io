@@ -1,29 +1,31 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { createPageUrl } from "../utils";
 import {
   ArrowLeft,
-  ExternalLink,
-  Download,
-  Star,
-  Smartphone,
-  Zap,
-  Heart,
-  Users,
+  Car,
   Dices,
+  Download,
+  ExternalLink,
+  Feather,
+  GraduationCap,
+  Heart,
+  HelpCircle,
   Layers,
   Repeat,
-  Feather,
-  Sparkles,
   Shield,
-  Car,
-  GraduationCap,
+  Smartphone,
   Smile,
-  HelpCircle,
+  Sparkles,
+  Star,
+  Users,
+  Zap,
 } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
+
 import { Button } from "../components/ui/button";
-import diceIcon from "../assets/dice.png";
+import { Link } from "react-router-dom";
+import React from "react";
+import { createPageUrl } from "../utils";
+
+// Removed unused import
 
 export default function DiceRoll() {
   const features = [
@@ -93,12 +95,12 @@ export default function DiceRoll() {
   // ];
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       {/* Navigation */}
-      <div className="mb-8">
+      <div className="mb-6 sm:mb-8">
         <Link
           to={createPageUrl("Home")}
-          className="inline-flex items-center gap-2 text-slate-600 hover:text-teal-600 transition-colors duration-300 group"
+          className="inline-flex items-center gap-2 text-slate-600 hover:text-teal-600 transition-colors duration-300 group text-sm sm:text-base"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" />
           Back to Home
@@ -106,40 +108,42 @@ export default function DiceRoll() {
       </div>
 
       {/* Hero Section */}
-      <div className="text-center mb-16">
-        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-100 to-purple-100 text-teal-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-          <span className="text-lg">🎲</span>
-          Your Virtual Dice Roller for Every Game!
+      <div className="text-center mb-12 sm:mb-16">
+        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-100 to-purple-100 text-teal-700 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+          <span className="text-base sm:text-lg">🎲</span>
+          <span className="hidden sm:inline">Your Virtual Dice Roller for Every Game!</span>
+          <span className="sm:hidden">Virtual Dice Roller!</span>
         </div>
 
-        <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">
           Dice Roll: RPG & Board Games
-          <span className="block text-3xl md:text-4xl text-slate-600 font-normal mt-2">
+          <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-600 font-normal mt-2">
             🎮 Perfect for RPGs, board games, and everyday fun!
           </span>
         </h1>
 
-        <p className="text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-slate-600 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed px-2">
           Forgot your dice at home? Dice Roll is your all-in-one digital dice
           solution. Minimalist, elegant, fast, and always in your pocket — made
           by gamers, for gamers!
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
           <Button
             asChild
             size="lg"
-            className="bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white px-8 py-4 h-auto text-lg font-semibold"
+            className="bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg font-semibold w-full sm:w-auto"
           >
             <a
               href="https://apps.apple.com/us/app/dice-roll-your-pocket-dice/id6746415571"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3"
+              className="flex items-center gap-3 justify-center"
             >
-              <Download className="w-5 h-5" />
-              Download on App Store
-              <ExternalLink className="w-4 h-4" />
+              <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="hidden sm:inline">Download on App Store</span>
+              <span className="sm:hidden">App Store</span>
+              <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
             </a>
           </Button>
 
@@ -147,87 +151,65 @@ export default function DiceRoll() {
             asChild
             variant="outline"
             size="lg"
-            className="border-2 border-teal-300 text-teal-700 hover:bg-teal-50 px-8 py-4 h-auto text-lg font-semibold"
+            className="border-2 border-teal-300 text-teal-700 hover:bg-teal-50 px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg font-semibold w-full sm:w-auto"
           >
             <a
               href="https://play.google.com/store/apps/details?id=com.nvsoftlab.dice_roller"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3"
+              className="flex items-center gap-3 justify-center"
             >
-              <Download className="w-5 h-5" />
-              Get it on Google Play
-              <ExternalLink className="w-4 h-4" />
+              <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="hidden sm:inline">Get it on Google Play</span>
+              <span className="sm:hidden">Google Play</span>
+              <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
             </a>
           </Button>
         </div>
 
-        <div className="flex items-center justify-center gap-6 text-slate-600">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-slate-600 text-sm sm:text-base">
           <div className="flex items-center gap-2">
-            <Star className="w-5 h-5 text-yellow-500 fill-current" />
+            <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 fill-current" />
             <span className="font-semibold">4.8/5</span>
           </div>
-          <div className="w-px h-4 bg-slate-300"></div>
+          <div className="hidden sm:block w-px h-4 bg-slate-300"></div>
           <div className="flex items-center gap-2">
-            <Download className="w-5 h-5 text-emerald-500" />
+            <Download className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />
             <span className="font-semibold">2K+ Downloads</span>
           </div>
-          <div className="w-px h-4 bg-slate-300"></div>
+          <div className="hidden sm:block w-px h-4 bg-slate-300"></div>
           <div className="flex items-center gap-2">
-            <Smartphone className="w-5 h-5 text-teal-500" />
+            <Smartphone className="w-4 h-4 sm:w-5 sm:h-5 text-teal-500" />
             <span className="font-semibold">iOS & Android</span>
           </div>
         </div>
       </div>
 
-      {/* App Preview */}
-      <div className="mb-20">
-        <Card className="bg-gradient-to-br from-teal-600 to-purple-700 border-0 shadow-2xl overflow-hidden">
-          <CardContent className="p-12 text-center text-white">
-            <div className="max-w-2xl mx-auto">
-              <img
-                src={diceIcon}
-                alt="Dice Icon"
-                className="w-32 h-32 object-contain mx-auto mb-6"
-              />
-              <h3 className="text-2xl font-bold mb-4">
-                Beautiful Dice Animation
-              </h3>
-              <p className="text-teal-100 text-lg leading-relaxed">
-                Experience captivating dice rolls on your mobile device. Watch
-                your dice animate effortlessly, delivering clear and satisfying
-                results for every game.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
       {/* Features Section */}
-      <div className="mb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
+      <div className="mb-16 sm:mb-20">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
             ✨ Key Features
           </h2>
-          <p className="text-lg text-slate-600">
+          <p className="text-base sm:text-lg text-slate-600">
             Packed with features that make every roll special
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group"
+              className="bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden"
             >
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-100 to-purple-100 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:from-teal-200 group-hover:to-purple-200 group-hover:scale-110 transition-all duration-300">
-                  <feature.icon className="w-8 h-8 text-teal-600" />
+              <CardContent className="p-4 sm:p-6">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-teal-500 to-purple-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-teal-600 transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 group-hover:text-teal-600 transition-colors duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                   {feature.description}
                 </p>
               </CardContent>
@@ -237,151 +219,58 @@ export default function DiceRoll() {
       </div>
 
       {/* Perfect For Section */}
-      <div className="mb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
-            🧙 Perfect For...
+      <div className="mb-16 sm:mb-20">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
+            🎯 Perfect For
           </h2>
+          <p className="text-base sm:text-lg text-slate-600">
+            Whether you're a hardcore gamer or just need a random number
+          </p>
         </div>
-        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {perfectFor.map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 bg-white/60 backdrop-blur-sm p-4 rounded-xl shadow-md"
+              className="flex items-center gap-3 sm:gap-4 bg-white/60 backdrop-blur-sm p-4 sm:p-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-lg flex-shrink-0 flex items-center justify-center">
-                <item.icon className="w-5 h-5 text-emerald-600" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-teal-100 to-purple-100 rounded-lg flex-shrink-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-teal-600" />
               </div>
-              <p className="text-slate-700 font-medium">{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Built by Devs Section */}
-      <div className="mb-20">
-        <Card className="bg-white/70 backdrop-blur-sm border-0 shadow-xl">
-          <CardContent className="p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
-            <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
-              <Heart className="w-12 h-12 text-white fill-current" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">
-                Built by Passionate Developers
-              </h3>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Created by two indie devs who love games as much as you do. We
-                understand what players need because we're players too, and
-                we're dedicated to delivering the best experience.
+              <p className="text-slate-700 font-medium text-sm sm:text-base">
+                {item.text}
               </p>
             </div>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Stats Section */}
-      <div className="bg-white/50 backdrop-blur-sm rounded-3xl p-12 text-center mb-20">
-        <h2 className="text-3xl font-bold text-slate-900 mb-8">
-          Loved by Users Worldwide
-        </h2>
-
-        <div className="grid md:grid-cols-4 gap-8 ">
-          <div className="text-center">
-            <div className="flex items-center justify-center gap-1 mb-2">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-5 h-5 text-yellow-500 fill-current"
-                />
-              ))}
-            </div>
-            <div className="text-2xl font-bold text-slate-900">4.8/5</div>
-            <div className="text-slate-600">Average Rating</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-slate-900 flex items-center justify-center gap-1">
-              <Download className="w-6 h-6 text-green-500" />
-              2K+
-            </div>
-            <div className="text-slate-600">Downloads</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-slate-900 flex items-center justify-center gap-1">
-              <Users className="w-6 h-6 text-blue-500" />
-              1K+
-            </div>
-            <div className="text-slate-600">Active Users</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-slate-900 flex items-center justify-center gap-1">
-              <Heart className="w-6 h-6 text-red-500" />
-              99%
-            </div>
-            <div className="text-slate-600">Satisfaction</div>
-          </div>
-        </div>
-      </div>
-
-      {/* User Reviews
-      <div className="mb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
-            What Users Say
-          </h2>
-          <p className="text-lg text-slate-600">Real reviews from real users</p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {reviews.map((review, index) => (
-            <Card
-              key={index}
-              className="bg-white/70 backdrop-blur-sm border-0 shadow-lg"
-            >
-              <CardContent className="p-6">
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-4 h-4 text-yellow-500 fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-slate-700 mb-4 leading-relaxed">
-                  "{review.text}"
-                </p>
-                <div className="font-semibold text-slate-900">
-                  {review.name}
-                </div>
-              </CardContent>
-            </Card>
           ))}
         </div>
-      </div> */}
+      </div>
 
-      {/* CTA Section */}
-      <div className="bg-gradient-to-br from-teal-600 to-purple-700 rounded-3xl p-12 text-center text-white">
-        <h2 className="text-3xl font-bold mb-4">📲 Download Dice Roll now!</h2>
-        <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
-          Never be without your dice again! This app is your pocket-sized
-          companion for every roll, whether you're a dungeon master, casual
-          gamer, or teacher.
+      {/* Download Section */}
+      <div className="text-center bg-gradient-to-r from-teal-50 to-purple-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
+          Ready to Roll?
+        </h2>
+        <p className="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          Download Dice Roll now and never be without dice again! Perfect for gaming on the go.
         </p>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        
+        <div className="flex flex-row items-center justify-center gap-3 sm:gap-4">
           <Button
             asChild
             size="lg"
-            className="bg-white text-teal-700 hover:bg-teal-50 px-8 py-4 h-auto text-lg font-semibold"
+            className="bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg font-semibold w-full sm:w-auto"
           >
             <a
               href="https://apps.apple.com/us/app/dice-roll-your-pocket-dice/id6746415571"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3"
+              className="flex items-center gap-3 justify-center"
             >
-              <Download className="w-5 h-5" />
-              App Store
-              <ExternalLink className="w-4 h-4" />
+              <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="hidden sm:inline">Download on App Store</span>
+              <span className="sm:hidden">App Store</span>
+              <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
             </a>
           </Button>
 
@@ -389,17 +278,18 @@ export default function DiceRoll() {
             asChild
             variant="outline"
             size="lg"
-            className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 h-auto text-lg font-semibold"
+            className="border-2 border-teal-300 text-teal-700 hover:bg-teal-50 px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg font-semibold w-full sm:w-auto"
           >
             <a
               href="https://play.google.com/store/apps/details?id=com.nvsoftlab.dice_roller"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3"
+              className="flex items-center gap-3 justify-center"
             >
-              <Download className="w-5 h-5" />
-              Google Play
-              <ExternalLink className="w-4 h-4" />
+              <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="hidden sm:inline">Get it on Google Play</span>
+              <span className="sm:hidden">Google Play</span>
+              <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
             </a>
           </Button>
         </div>
