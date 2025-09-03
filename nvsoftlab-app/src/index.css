@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 *,
 *::before,
 *::after {
@@ -10,17 +11,84 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll on mobile */
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 #root {
   margin: 0;
   width: 100%;
   text-align: initial;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  /* Ensure buttons are touch-friendly */
+  button,
+  a,
+  [role='button'] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improve text readability on small screens */
+  p,
+  span,
+  div {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Prevent horizontal overflow */
+  .max-w-6xl {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Smooth scrolling for better mobile experience */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improve focus states for accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #0ea5e9;
+  outline-offset: 2px;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 640px) {
+  .flex.gap-2 > * {
+    min-height: 44px;
+  }
+
+  /* Ensure proper spacing on mobile */
+  .space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+
+  .space-y-6 > * + * {
+    margin-top: 1.5rem;
+  }
+
+  /* Better mobile card layout */
+  .bg-white\/70 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
 }
