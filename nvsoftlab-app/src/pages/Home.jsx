@@ -5,7 +5,6 @@ import {
   ExternalLink,
   Heart,
   Instagram,
-  MessageCircle,
   Smartphone,
   Star,
 } from "lucide-react";

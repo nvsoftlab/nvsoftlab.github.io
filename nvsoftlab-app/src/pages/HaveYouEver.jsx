@@ -5,7 +5,6 @@ import {
   Download,
   ExternalLink,
   Gamepad2,
-  GraduationCap,
   Heart,
   Home,
   MessageCircle,
@@ -14,7 +13,6 @@ import {
   Smartphone,
   Sparkles,
   Star,
-  Trophy,
   Users,
 } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";

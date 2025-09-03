@@ -6,7 +6,6 @@ import {
   ExternalLink,
   Feather,
   GraduationCap,
-  Heart,
   HelpCircle,
   Layers,
   Repeat,
