@@ -159,7 +159,7 @@ export default function Home() {
                     <img
                       src={haveYouEverIcon}
                       alt="Have You Ever Icon"
-                      className="w-12 h-12 lg:w-16 lg:h-16 object-contain"
+                      className="w-14 h-14 lg:w-14 lg:h-14 object-contain"
                     />
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
