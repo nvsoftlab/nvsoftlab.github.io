@@ -112,7 +112,7 @@ export default function HaveYouEver() {
             className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg font-semibold w-full sm:w-auto"
           >
             <a
-              href="https://apps.apple.com/us/app/have-you-ever-party-game/id1234567890"
+              href="https://apps.apple.com/app/have-you-ever-party-game/id6751416602"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 justify-center"
@@ -124,7 +124,7 @@ export default function HaveYouEver() {
             </a>
           </Button>
 
-          <Button
+          {/* <Button
             asChild
             variant="outline"
             size="lg"
@@ -141,7 +141,7 @@ export default function HaveYouEver() {
               <span className="sm:hidden">Google Play</span>
               <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
             </a>
-          </Button>
+          </Button> */}
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-slate-600 text-sm sm:text-base">
@@ -245,7 +245,7 @@ export default function HaveYouEver() {
             className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg font-semibold w-full sm:w-auto"
           >
             <a
-              href="https://apps.apple.com/us/app/have-you-ever-party-game/id1234567890"
+              href="https://apps.apple.com/app/have-you-ever-party-game/id6751416602"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 justify-center"
@@ -257,7 +257,7 @@ export default function HaveYouEver() {
             </a>
           </Button>
 
-          <Button
+          {/* <Button
             asChild
             variant="outline"
             size="lg"
@@ -274,7 +274,7 @@ export default function HaveYouEver() {
               <span className="sm:hidden">Google Play</span>
               <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
             </a>
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>

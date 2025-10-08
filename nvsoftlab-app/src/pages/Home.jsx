@@ -176,7 +176,7 @@ export default function Home() {
                       className="bg-white text-pink-700 hover:bg-pink-50 font-semibold px-2 py-1 sm:px-6 py-2 sm:py-3 h-auto text-sm sm:text-base"
                     >
                       <a
-                        href="https://apps.apple.com/us/app/have-you-ever-party-game/id1234567890"
+                        href="https://apps.apple.com/app/have-you-ever-party-game/id6751416602"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2"
@@ -186,7 +186,7 @@ export default function Home() {
                       </a>
                     </Button>
 
-                    <Button
+                    {/* <Button
                       asChild
                       variant="outline"
                       className="border-white/30 text-white hover:bg-white/10 font-semibold px-2 py-1 sm:px-6 py-2 sm:py-3 h-auto text-sm sm:text-base"
@@ -200,7 +200,7 @@ export default function Home() {
                         <Download className="w-3 h-3 sm:w-4 sm:h-4" />
                         Google Play
                       </a>
-                    </Button>
+                    </Button> */}
                   </div>
                 </div>
               </div>
