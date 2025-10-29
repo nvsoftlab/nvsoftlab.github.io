@@ -61,7 +61,9 @@ export default function Home() {
       <div className="text-center mb-16 sm:mb-20">
         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-100 to-purple-100 text-teal-700 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-6 sm:mb-8">
           <Smartphone className="w-3 h-3 sm:w-4 sm:h-4" />
-          <span className="hidden sm:inline">Mobile App Development Studio</span>
+          <span className="hidden sm:inline">
+            Mobile App Development Studio
+          </span>
           <span className="sm:hidden">Mobile App Studio</span>
         </div>
 
@@ -82,8 +84,7 @@ export default function Home() {
         <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
           <Button
             asChild
-            variant="outline"
-            className="flex items-center justify-center gap-3 rounded-full border-2 border-pink-200 text-pink-600 hover:bg-pink-50 hover:border-pink-300 transition-all duration-300 text-sm sm:text-base w-full sm:w-auto max-w-[280px] sm:max-w-none"
+            className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-300 text-sm sm:text-base w-full sm:w-auto max-w-[280px] sm:max-w-none flex items-center gap-3"
           >
             <a
               href="https://instagram.com/nvsoftlab"
@@ -99,8 +100,7 @@ export default function Home() {
 
           <Button
             asChild
-            variant="outline"
-            className="flex items-center gap-3 rounded-full border-2 border-slate-200 text-slate-600 hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 text-sm sm:text-base w-full sm:w-auto max-w-[280px] sm:max-w-none"
+            className="bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-300 text-sm sm:text-base w-full sm:w-auto max-w-[280px] sm:max-w-none flex items-center gap-3"
           >
             <a
               href="https://tiktok.com/@nvsoftlabs"
@@ -166,14 +166,15 @@ export default function Home() {
                     Have You Ever
                   </h3>
                   <p className="text-pink-100 mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg leading-relaxed">
-                    A fun and interactive party game that brings people together through over 30 categories 
-                    and 1500+ questions. Perfect for icebreakers, couples, families, and parties!
+                    A fun and interactive party game that brings people together
+                    through over 30 categories and 1500+ questions. Perfect for
+                    icebreakers, couples, families, and parties!
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button
                       asChild
-                      className="bg-white text-pink-700 hover:bg-pink-50 font-semibold px-2 py-1 sm:px-6 py-2 sm:py-3 h-auto text-sm sm:text-base"
+                      className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-semibold px-4 py-2 sm:px-6 py-3 h-auto text-sm sm:text-base rounded-lg flex items-center gap-2"
                     >
                       <a
                         href="https://apps.apple.com/app/have-you-ever-party-game/id6751416602"
@@ -181,15 +182,25 @@ export default function Home() {
                         rel="noopener noreferrer"
                         className="flex items-center gap-2"
                       >
-                        <Download className="w-3 h-3 sm:w-4 sm:h-4" />
-                        App Store
+                        <svg
+                          className="w-4 h-4 sm:w-5 sm:h-5"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        <div className="text-left">
+                          <div className="text-xs text-pink-100">
+                            Download on the
+                          </div>
+                          <div className="text-sm font-semibold">App Store</div>
+                        </div>
                       </a>
                     </Button>
 
                     <Button
                       asChild
-                      variant="outline"
-                      className="border-white/30 text-white hover:bg-white/10 font-semibold px-2 py-1 sm:px-6 py-2 sm:py-3 h-auto text-sm sm:text-base"
+                      className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold px-4 py-2 sm:px-6 py-3 h-auto text-sm sm:text-base rounded-lg flex items-center gap-2"
                     >
                       <a
                         href="https://play.google.com/store/apps/details?id=com.nvsoftlab.haveyouever"
@@ -197,9 +208,21 @@ export default function Home() {
                         rel="noopener noreferrer"
                         className="flex items-center gap-2"
                       >
-                        <Download className="w-3 h-3 sm:w-4 sm:h-4" />
-                        Google Play
-                        <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
+                        <svg
+                          className="w-4 h-4 sm:w-5 sm:h-5"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M3.609 1.814L13.792 12 3.609 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L13.5 12l4.199-2.491zM5.864 2.658L16.802 8.99l-8.635 8.635-2.303-2.302 8.635-8.635z" />
+                        </svg>
+                        <div className="text-left">
+                          <div className="text-xs text-purple-100">
+                            GET IT ON
+                          </div>
+                          <div className="text-sm font-semibold">
+                            Google Play
+                          </div>
+                        </div>
                       </a>
                     </Button>
                   </div>
@@ -295,7 +318,7 @@ export default function Home() {
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button
                       asChild
-                      className="bg-white text-teal-700 hover:bg-teal-50 font-semibold px-2 py-1 sm:px-6 py-2 sm:py-3 h-auto text-sm sm:text-base"
+                      className="bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-semibold px-4 py-2 sm:px-6 py-3 h-auto text-sm sm:text-base rounded-lg flex items-center gap-2"
                     >
                       <a
                         href="https://apps.apple.com/us/app/dice-roll-your-pocket-dice/id6746415571"
@@ -303,16 +326,25 @@ export default function Home() {
                         rel="noopener noreferrer"
                         className="flex items-center gap-2"
                       >
-                        <Download className="w-3 h-3 sm:w-4 sm:h-4" />
-                        App Store
-                        <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
+                        <svg
+                          className="w-4 h-4 sm:w-5 sm:h-5"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        <div className="text-left">
+                          <div className="text-xs text-teal-100">
+                            Download on the
+                          </div>
+                          <div className="text-sm font-semibold">App Store</div>
+                        </div>
                       </a>
                     </Button>
 
                     <Button
                       asChild
-                      variant="outline"
-                      className="border-white/30 text-white hover:bg-white/10 font-semibold px-2 py-1 sm:px-6 py-2 sm:py-3 h-auto text-sm sm:text-base"
+                      className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold px-4 py-2 sm:px-6 py-3 h-auto text-sm sm:text-base rounded-lg flex items-center gap-2"
                     >
                       <a
                         href="https://play.google.com/store/apps/details?id=com.nvsoftlab.dice_roller"
@@ -320,9 +352,21 @@ export default function Home() {
                         rel="noopener noreferrer"
                         className="flex items-center gap-2"
                       >
-                        <Download className="w-3 h-3 sm:w-4 sm:h-4" />
-                        Google Play
-                        <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
+                        <svg
+                          className="w-4 h-4 sm:w-5 sm:h-5"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M3.609 1.814L13.792 12 3.609 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L13.5 12l4.199-2.491zM5.864 2.658L16.802 8.99l-8.635 8.635-2.303-2.302 8.635-8.635z" />
+                        </svg>
+                        <div className="text-left">
+                          <div className="text-xs text-purple-100">
+                            GET IT ON
+                          </div>
+                          <div className="text-sm font-semibold">
+                            Google Play
+                          </div>
+                        </div>
                       </a>
                     </Button>
                   </div>
@@ -353,7 +397,9 @@ export default function Home() {
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-teal-500 rounded-full flex-shrink-0"></div>
-                      <span className="text-slate-700 text-sm sm:text-base">Just Shake to Roll</span>
+                      <span className="text-slate-700 text-sm sm:text-base">
+                        Just Shake to Roll
+                      </span>
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></div>
@@ -454,7 +500,7 @@ export default function Home() {
               href="https://instagram.com/nvsoftlab"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:from-pink-600 hover:to-purple-600 transition-all duration-300 font-medium text-sm sm:text-base w-full sm:w-auto justify-center"
+              className="flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 font-semibold text-sm sm:text-base w-full sm:w-auto justify-center"
             >
               <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
               Instagram
@@ -464,7 +510,7 @@ export default function Home() {
               href="https://tiktok.com/@nvsoftlabs"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-slate-800 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-slate-900 transition-all duration-300 font-medium text-sm sm:text-base w-full sm:w-auto justify-center"
+              className="flex items-center gap-2 bg-gradient-to-r from-slate-800 to-slate-900 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:from-slate-900 hover:to-black transition-all duration-300 font-semibold text-sm sm:text-base w-full sm:w-auto justify-center"
             >
               <img
                 src={tikTokIcon}
@@ -481,7 +527,9 @@ export default function Home() {
             <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-teal-600 to-purple-600 bg-clip-text text-transparent">
               2
             </div>
-            <div className="text-slate-600 text-sm sm:text-base">Developers</div>
+            <div className="text-slate-600 text-sm sm:text-base">
+              Developers
+            </div>
           </div>
           <div className="hidden sm:block w-px h-12 bg-slate-300"></div>
           <div className="text-center">
@@ -495,7 +543,9 @@ export default function Home() {
             <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-teal-600 to-purple-600 bg-clip-text text-transparent">
               ∞
             </div>
-            <div className="text-slate-600 text-sm sm:text-base">Ideas Brewing</div>
+            <div className="text-slate-600 text-sm sm:text-base">
+              Ideas Brewing
+            </div>
           </div>
         </div>
       </div>
