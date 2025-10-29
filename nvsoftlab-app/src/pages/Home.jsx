@@ -186,21 +186,22 @@ export default function Home() {
                       </a>
                     </Button>
 
-                    {/* <Button
+                    <Button
                       asChild
                       variant="outline"
                       className="border-white/30 text-white hover:bg-white/10 font-semibold px-2 py-1 sm:px-6 py-2 sm:py-3 h-auto text-sm sm:text-base"
                     >
                       <a
-                        href="https://play.google.com/store/apps/details?id=com.nvsoftlab.have_you_ever"
+                        href="https://play.google.com/store/apps/details?id=com.nvsoftlab.haveyouever"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2"
                       >
                         <Download className="w-3 h-3 sm:w-4 sm:h-4" />
                         Google Play
+                        <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
                       </a>
-                    </Button> */}
+                    </Button>
                   </div>
                 </div>
               </div>

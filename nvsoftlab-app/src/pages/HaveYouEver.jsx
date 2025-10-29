@@ -29,19 +29,22 @@ export default function HaveYouEver() {
     {
       icon: <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />,
       title: "Massive Question Library",
-      description: "Over 30 categories with 1500+ questions for endless entertainment",
+      description:
+        "Over 30 categories with 1500+ questions for endless entertainment",
       color: "from-pink-500 to-rose-500",
     },
     {
       icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />,
       title: "Questions for Friends",
-      description: "Fun and engaging questions perfect for friend groups and parties",
+      description:
+        "Fun and engaging questions perfect for friend groups and parties",
       color: "from-purple-500 to-indigo-500",
     },
     {
       icon: <Heart className="w-5 h-5 sm:w-6 sm:h-6" />,
       title: "Questions for Couples",
-      description: "Romantic and intimate questions to deepen your relationship",
+      description:
+        "Romantic and intimate questions to deepen your relationship",
       color: "from-red-500 to-pink-500",
     },
     {
@@ -65,12 +68,30 @@ export default function HaveYouEver() {
   ];
 
   const perfectFor = [
-    { icon: <PartyPopper className="w-5 h-5 sm:w-6 sm:h-6" />, text: "Birthday parties and celebrations" },
-    { icon: <Coffee className="w-5 h-5 sm:w-6 sm:h-6" />, text: "Coffee dates and casual meetups" },
-    { icon: <Heart className="w-5 h-5 sm:w-6 sm:h-6" />, text: "Romantic date nights for couples" },
-    { icon: <Car className="w-5 h-5 sm:w-6 sm:h-6" />, text: "Road trips and travel entertainment" },
-    { icon: <Home className="w-5 h-5 sm:w-6 sm:h-6" />, text: "Family game nights and bonding" },
-    { icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />, text: "Team building and icebreakers" },
+    {
+      icon: <PartyPopper className="w-5 h-5 sm:w-6 sm:h-6" />,
+      text: "Birthday parties and celebrations",
+    },
+    {
+      icon: <Coffee className="w-5 h-5 sm:w-6 sm:h-6" />,
+      text: "Coffee dates and casual meetups",
+    },
+    {
+      icon: <Heart className="w-5 h-5 sm:w-6 sm:h-6" />,
+      text: "Romantic date nights for couples",
+    },
+    {
+      icon: <Car className="w-5 h-5 sm:w-6 sm:h-6" />,
+      text: "Road trips and travel entertainment",
+    },
+    {
+      icon: <Home className="w-5 h-5 sm:w-6 sm:h-6" />,
+      text: "Family game nights and bonding",
+    },
+    {
+      icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />,
+      text: "Team building and icebreakers",
+    },
   ];
 
   return (
@@ -101,8 +122,9 @@ export default function HaveYouEver() {
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl text-slate-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
-          A fun and interactive party game that brings people together through over 30 categories 
-          and 1500+ questions. Perfect for icebreakers, couples, families, and parties!
+          A fun and interactive party game that brings people together through
+          over 30 categories and 1500+ questions. Perfect for icebreakers,
+          couples, families, and parties!
         </p>
 
         <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
@@ -124,14 +146,14 @@ export default function HaveYouEver() {
             </a>
           </Button>
 
-          {/* <Button
+          <Button
             asChild
             variant="outline"
             size="lg"
             className="border-2 border-pink-300 text-pink-700 hover:bg-pink-50 px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg font-semibold w-full sm:w-auto"
           >
             <a
-              href="https://play.google.com/store/apps/details?id=com.nvsoftlab.have_you_ever"
+              href="https://play.google.com/store/apps/details?id=com.nvsoftlab.haveyouever"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 justify-center"
@@ -141,7 +163,7 @@ export default function HaveYouEver() {
               <span className="sm:hidden">Google Play</span>
               <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
             </a>
-          </Button> */}
+          </Button>
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-slate-600 text-sm sm:text-base">
@@ -161,8 +183,6 @@ export default function HaveYouEver() {
           </div>
         </div>
       </div>
-
-   
 
       {/* Features Section */}
       <div className="mb-16 sm:mb-20">
@@ -227,17 +247,16 @@ export default function HaveYouEver() {
         </div>
       </div>
 
-
-
       {/* Download Section */}
       <div className="text-center bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
         <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
           Ready to Start Playing?
         </h2>
         <p className="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 max-w-2xl mx-auto">
-          Download Have You Ever now and transform any gathering into an exciting adventure of discovery and laughter!
+          Download Have You Ever now and transform any gathering into an
+          exciting adventure of discovery and laughter!
         </p>
-        
+
         <div className="flex flex-row items-center justify-center gap-3 sm:gap-4">
           <Button
             asChild
@@ -257,14 +276,14 @@ export default function HaveYouEver() {
             </a>
           </Button>
 
-          {/* <Button
+          <Button
             asChild
             variant="outline"
             size="lg"
             className="border-2 border-pink-300 text-pink-700 hover:bg-pink-50 px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg font-semibold w-full sm:w-auto"
           >
             <a
-              href="https://play.google.com/store/apps/details?id=com.nvsoftlab.have_you_ever"
+              href="https://play.google.com/store/apps/details?id=com.nvsoftlab.haveyouever"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 justify-center"
@@ -274,7 +293,7 @@ export default function HaveYouEver() {
               <span className="sm:hidden">Google Play</span>
               <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
             </a>
-          </Button> */}
+          </Button>
         </div>
       </div>
     </div>
