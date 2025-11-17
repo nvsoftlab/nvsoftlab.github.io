@@ -1,4 +1,4 @@
-import { Gamepad2, Home, Menu, MessageCircle, X } from "lucide-react";
+import { Gamepad2, Heart, Home, Menu, MessageCircle, X } from "lucide-react";
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
@@ -56,6 +56,18 @@ export default function Layout({ children, currentPageName }) {
               </Link>
               
               <Link
+                to={createPageUrl("ExposedAI")}
+                className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-sm sm:text-base ${
+                  currentPageName === "ExposedAI"
+                    ? "bg-gradient-to-r from-red-100 to-pink-100 text-red-700"
+                    : "text-slate-600 hover:text-red-600 hover:bg-red-50"
+                }`}
+              >
+                <Heart className="w-4 h-4" />
+                <span className="font-medium">Exposed AI</span>
+              </Link>
+              
+              <Link
                 to={createPageUrl("HaveYouEver")}
                 className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 text-sm sm:text-base ${
                   currentPageName === "HaveYouEver"
@@ -110,6 +122,19 @@ export default function Layout({ children, currentPageName }) {
                 >
                   <Home className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span className="font-medium">Home</span>
+                </Link>
+                
+                <Link
+                  to={createPageUrl("ExposedAI")}
+                  className={`flex items-center gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-sm sm:text-base ${
+                    currentPageName === "ExposedAI"
+                      ? "bg-gradient-to-r from-red-100 to-pink-100 text-red-700"
+                      : "text-slate-600 hover:text-red-600 hover:bg-red-50"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="font-medium">Exposed AI</span>
                 </Link>
                 
                 <Link

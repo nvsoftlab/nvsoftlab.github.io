@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import DiceRoll from "./pages/DiceRoll";
+import ExposedAI from "./pages/ExposedAI";
 import HaveYouEver from "./pages/HaveYouEver";
 import Home from "./pages/Home";
 import Layout from "./Layout";
@@ -27,6 +28,8 @@ function LayoutWithLocation({ children }) {
 
   if (location.pathname === createPageUrl("Home")) {
     currentPageName = "Home";
+  } else if (location.pathname === createPageUrl("ExposedAI")) {
+    currentPageName = "ExposedAI";
   } else if (location.pathname === createPageUrl("HaveYouEver")) {
     currentPageName = "HaveYouEver";
   } else if (location.pathname === createPageUrl("DiceRoll")) {
@@ -44,6 +47,7 @@ export default function App() {
       <LayoutWithLocation>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/exposed-ai" element={<ExposedAI />} />
           <Route path="/have-you-ever" element={<HaveYouEver />} />
           <Route path="/dice-roll" element={<DiceRoll />} />
           <Route path="*" element={<Home />} />

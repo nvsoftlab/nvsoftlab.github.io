@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { createPageUrl } from "../utils";
 import diceIcon from "../../src/assets/dice.png";
+import exposedAIIcon from "../../src/assets/exposed-ai.png";
 import haveYouEverIcon from "../../src/assets/have-you-ever.png";
 import tikTokIcon from "../../src/assets/tiktok.png";
 
@@ -75,9 +76,9 @@ export default function Home() {
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl text-slate-600 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-2">
-          We are two mobile app developers — <strong>Vladyslav Vaskov</strong>{" "}
-          and <strong>Nazar Dzys</strong>. We build simple and fun apps using
-          Flutter.
+          We are two developers - <strong>Vladyslav Vaskov</strong> and{" "}
+          <strong>Nazar Dzys</strong>. We build simple and fun apps that bring
+          people together.
         </p>
 
         {/* Social Media Links */}
@@ -146,8 +147,146 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Have You Ever App Card */}
+        {/* Exposed AI App Card */}
         <Card className="bg-white/70 backdrop-blur-sm border-0 shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group">
+          <CardContent className="p-0">
+            <div className="grid lg:grid-cols-2 gap-0">
+              <div className="bg-gradient-to-br from-red-600 to-pink-700 p-6 sm:p-8 lg:p-12 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-white/10 rounded-full -translate-y-8 sm:-translate-y-12 lg:-translate-y-16 translate-x-8 sm:translate-x-12 lg:translate-x-16"></div>
+                <div className="absolute bottom-0 left-0 w-12 h-12 sm:w-16 sm:h-16 lg:w-24 lg:h-24 bg-white/10 rounded-full translate-y-6 sm:translate-y-8 lg:translate-y-12 -translate-x-6 sm:-translate-x-8 lg:-translate-x-12"></div>
+
+                <div className="relative z-10">
+                  <div className="w-14 h-14 lg:w-16 lg:h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <img
+                      src={exposedAIIcon}
+                      alt="Exposed AI Icon"
+                      className="w-10 h-10 lg:w-10 lg:h-10 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
+                    Exposed AI
+                  </h3>
+                  <p className="text-red-100 mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg leading-relaxed">
+                    An Ideal Start for Two - 700+ questions to deepen your
+                    connection, spark intimacy, and fill your evenings with
+                    laughter and real conversations.
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button
+                      asChild
+                      className="bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white font-semibold px-4 py-2 sm:px-6 py-3 h-auto text-sm sm:text-base rounded-lg flex items-center gap-2"
+                    >
+                      <a
+                        href="https://apps.apple.com/us/app/exposed-game-have-you-ever/id6751416602"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
+                        <svg
+                          className="w-4 h-4 sm:w-5 sm:h-5"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        <div className="text-left">
+                          <div className="text-xs text-red-100">
+                            Download on the
+                          </div>
+                          <div className="text-sm font-semibold">App Store</div>
+                        </div>
+                      </a>
+                    </Button>
+
+                    <Button
+                      asChild
+                      className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-semibold px-4 py-2 sm:px-6 py-3 h-auto text-sm sm:text-base rounded-lg flex items-center gap-2 opacity-75 cursor-not-allowed"
+                      disabled
+                    >
+                      <a
+                        href="#"
+                        onClick={(e) => e.preventDefault()}
+                        className="flex items-center gap-2 pointer-events-none"
+                      >
+                        <svg
+                          className="w-4 h-4 sm:w-5 sm:h-5"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M3.609 1.814L13.792 12 3.609 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L13.5 12l4.199-2.491zM5.864 2.658L16.802 8.99l-8.635 8.635-2.303-2.302 8.635-8.635z" />
+                        </svg>
+                        <div className="text-left">
+                          <div className="text-xs text-pink-100">
+                            Coming Soon
+                          </div>
+                          <div className="text-sm font-semibold">
+                            Google Play
+                          </div>
+                        </div>
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+                <div className="space-y-4 sm:space-y-6">
+                  <div className="flex items-center gap-3">
+                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 fill-current" />
+                    <span className="text-slate-600 font-medium text-sm sm:text-base">
+                      Perfect for Couples
+                    </span>
+                  </div>
+
+                  <div className="space-y-3 sm:space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-red-500 rounded-full flex-shrink-0"></div>
+                      <span className="text-slate-700 text-sm sm:text-base">
+                        700+ questions to deepen your connection
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-pink-500 rounded-full flex-shrink-0"></div>
+                      <span className="text-slate-700 text-sm sm:text-base">
+                        Choose from Romantic, Spicy, or create your own
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-red-500 rounded-full flex-shrink-0"></div>
+                      <span className="text-slate-700 text-sm sm:text-base">
+                        Share hilarious and unforgettable stories
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-pink-500 rounded-full flex-shrink-0"></div>
+                      <span className="text-slate-700 text-sm sm:text-base">
+                        Create custom categories and inside jokes
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-red-500 rounded-full flex-shrink-0"></div>
+                      <span className="text-slate-700 text-sm sm:text-base">
+                        AI-powered questions keep every round unique
+                      </span>
+                    </div>
+                  </div>
+
+                  <Link
+                    to={createPageUrl("ExposedAI")}
+                    className="inline-flex items-center gap-2 text-red-600 hover:text-pink-600 font-semibold transition-colors duration-300 group text-sm sm:text-base"
+                  >
+                    Learn more about Exposed AI
+                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Have You Ever App Card */}
+        <Card className="bg-white/70 backdrop-blur-sm border-0 shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group mt-6 sm:mt-8">
           <CardContent className="p-0">
             <div className="grid lg:grid-cols-2 gap-0">
               <div className="bg-gradient-to-br from-pink-600 to-purple-700 p-6 sm:p-8 lg:p-12 text-white relative overflow-hidden">
@@ -174,13 +313,13 @@ export default function Home() {
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button
                       asChild
-                      className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-semibold px-4 py-2 sm:px-6 py-3 h-auto text-sm sm:text-base rounded-lg flex items-center gap-2"
+                      className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-semibold px-4 py-2 sm:px-6 py-3 h-auto text-sm sm:text-base rounded-lg flex items-center gap-2 opacity-75 cursor-not-allowed"
+                      disabled
                     >
                       <a
-                        href="https://apps.apple.com/app/have-you-ever-party-game/id6751416602"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2"
+                        href="#"
+                        onClick={(e) => e.preventDefault()}
+                        className="flex items-center gap-2 pointer-events-none"
                       >
                         <svg
                           className="w-4 h-4 sm:w-5 sm:h-5"
@@ -191,7 +330,7 @@ export default function Home() {
                         </svg>
                         <div className="text-left">
                           <div className="text-xs text-pink-100">
-                            Download on the
+                            Coming Soon
                           </div>
                           <div className="text-sm font-semibold">App Store</div>
                         </div>
@@ -534,7 +673,7 @@ export default function Home() {
           <div className="hidden sm:block w-px h-12 bg-slate-300"></div>
           <div className="text-center">
             <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-teal-600 to-purple-600 bg-clip-text text-transparent">
-              2
+              6+
             </div>
             <div className="text-slate-600 text-sm sm:text-base">Apps</div>
           </div>
