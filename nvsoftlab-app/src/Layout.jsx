@@ -1,4 +1,4 @@
-import { Gamepad2, Heart, Home, Menu, MessageCircle, X } from "lucide-react";
+import { Gamepad2, Heart, Home, Menu, MessageCircle, Moon, X } from "lucide-react";
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
@@ -17,7 +17,7 @@ export default function Layout({ children, currentPageName }) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-teal-50 to-purple-50">
+    <div className={`min-h-screen ${currentPageName === "UpsideDown" ? "bg-[#050510]" : "bg-gradient-to-br from-slate-50 via-teal-50 to-purple-50"}`}>
       <nav className="bg-white/80 backdrop-blur-md border-b border-slate-200/50 sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
@@ -65,6 +65,18 @@ export default function Layout({ children, currentPageName }) {
               >
                 <Heart className="w-4 h-4" />
                 <span className="font-medium">Exposed AI</span>
+              </Link>
+              
+              <Link
+                to={createPageUrl("UpsideDown")}
+                className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-sm sm:text-base ${
+                  currentPageName === "UpsideDown"
+                    ? "bg-gradient-to-r from-red-900 to-black text-white"
+                    : "text-slate-600 hover:text-red-600 hover:bg-red-50"
+                }`}
+              >
+                <Moon className="w-4 h-4" />
+                <span className="font-medium">Upside Down</span>
               </Link>
               
               <Link
@@ -135,6 +147,19 @@ export default function Layout({ children, currentPageName }) {
                 >
                   <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span className="font-medium">Exposed AI</span>
+                </Link>
+                
+                <Link
+                  to={createPageUrl("UpsideDown")}
+                  className={`flex items-center gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-sm sm:text-base ${
+                    currentPageName === "UpsideDown"
+                      ? "bg-gradient-to-r from-red-900 to-black text-white"
+                      : "text-slate-600 hover:text-red-600 hover:bg-red-50"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  <Moon className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="font-medium">Upside Down</span>
                 </Link>
                 
                 <Link

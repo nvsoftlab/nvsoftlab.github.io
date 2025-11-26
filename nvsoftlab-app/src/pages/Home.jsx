@@ -19,6 +19,7 @@ import diceIcon from "../../src/assets/dice.png";
 import exposedAIIcon from "../../src/assets/exposed-ai.png";
 import haveYouEverIcon from "../../src/assets/have-you-ever.png";
 import tikTokIcon from "../../src/assets/tiktok.png";
+import upsideDownIcon from "../../src/assets/upside-down.png";
 
 export default function Home() {
   const comingSoonApps = [
@@ -277,6 +278,151 @@ export default function Home() {
                     className="inline-flex items-center gap-2 text-red-600 hover:text-pink-600 font-semibold transition-colors duration-300 group text-sm sm:text-base"
                   >
                     Learn more about Exposed AI
+                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Upside Down App Card */}
+        <Card className="bg-white/70 backdrop-blur-sm border-0 shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group mt-6 sm:mt-8">
+          <CardContent className="p-0">
+            <div className="grid lg:grid-cols-2 gap-0">
+              <div className="bg-[#050510] p-6 sm:p-8 lg:p-12 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-[#FF0F0F]/10 rounded-full -translate-y-8 sm:-translate-y-12 lg:-translate-y-16 translate-x-8 sm:translate-x-12 lg:translate-x-16"></div>
+                <div className="absolute bottom-0 left-0 w-12 h-12 sm:w-16 sm:h-16 lg:w-24 lg:h-24 bg-[#FF0F0F]/10 rounded-full translate-y-6 sm:translate-y-8 lg:translate-y-12 -translate-x-6 sm:-translate-x-8 lg:-translate-x-12"></div>
+
+                <div className="relative z-10">
+                  <div className="w-14 h-14 lg:w-16 lg:h-16 bg-[#CC000000] border border-[#FF0F0F]/30 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <img
+                      src={upsideDownIcon}
+                      alt="Upside Down Icon"
+                      className="w-10 h-10 lg:w-10 lg:h-10 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
+                    Upside Down
+                  </h3>
+                  <p className="text-white/90 mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg leading-relaxed">
+                    The ultimate fan party game with anomalies to test your survival skills and loyalty. Face tough choices, reveal secrets, and see who belongs in your party.
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button
+                      asChild
+                      className="bg-[#FF0F0F] hover:bg-[#FF0F0F]/90 text-white font-semibold px-4 py-2 sm:px-6 py-3 h-auto text-sm sm:text-base rounded-lg flex items-center gap-2 opacity-75 cursor-not-allowed"
+                      disabled
+                    >
+                      <a
+                        href="#"
+                        onClick={(e) => e.preventDefault()}
+                        className="flex items-center gap-2 pointer-events-none"
+                      >
+                        <svg
+                          className="w-4 h-4 sm:w-5 sm:h-5"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        <div className="text-left">
+                          <div className="text-xs text-white/90">
+                            Coming Soon
+                          </div>
+                          <div className="text-sm font-semibold">App Store</div>
+                        </div>
+                      </a>
+                    </Button>
+
+                    <Button
+                      asChild
+                      className="bg-[#FF0F0F] hover:bg-[#FF0F0F]/90 text-white font-semibold px-4 py-2 sm:px-6 py-3 h-auto text-sm sm:text-base rounded-lg flex items-center gap-2 opacity-75 cursor-not-allowed"
+                      disabled
+                    >
+                      <a
+                        href="#"
+                        onClick={(e) => e.preventDefault()}
+                        className="flex items-center gap-2 pointer-events-none"
+                      >
+                        <svg
+                          className="w-4 h-4 sm:w-5 sm:h-5"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M3.609 1.814L13.792 12 3.609 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L13.5 12l4.199-2.491zM5.864 2.658L16.802 8.99l-8.635 8.635-2.303-2.302 8.635-8.635z" />
+                        </svg>
+                        <div className="text-left">
+                          <div className="text-xs text-white/90">
+                            Coming Soon
+                          </div>
+                          <div className="text-sm font-semibold">
+                            Google Play
+                          </div>
+                        </div>
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+                <div className="space-y-4 sm:space-y-6">
+                  <div className="flex items-center gap-3">
+                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 fill-current" />
+                    <span className="text-slate-600 font-medium text-sm sm:text-base">
+                      Coming Soon
+                    </span>
+                  </div>
+
+                  <div className="space-y-3 sm:space-y-4">
+                    <div>
+                      <p className="font-semibold text-slate-900 text-base sm:text-lg mb-2">The Ultimate Fan Party Game</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-[#FF0F0F] rounded-full flex-shrink-0"></div>
+                      <span className="text-slate-700 text-sm sm:text-base">
+                        Anomalies to test your survival skills & loyalty
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-[#FF0F0F] rounded-full flex-shrink-0"></div>
+                      <span className="text-slate-700 text-sm sm:text-base">
+                        Choose your path: Survival, Hellfire Club, or 80s Nostalgia
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-[#FF0F0F] rounded-full flex-shrink-0"></div>
+                      <span className="text-slate-700 text-sm sm:text-base">
+                        Would You Ever? Face tough choices with shocking twists
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-[#FF0F0F] rounded-full flex-shrink-0"></div>
+                      <span className="text-slate-700 text-sm sm:text-base">
+                        Reveal secrets and see who belongs in your Party
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-[#FF0F0F] rounded-full flex-shrink-0"></div>
+                      <span className="text-slate-700 text-sm sm:text-base">
+                        AI Deck Generator: Create infinite custom timelines & theories
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-[#FF0F0F] rounded-full flex-shrink-0"></div>
+                      <span className="text-slate-700 text-sm sm:text-base font-semibold">
+                        One-Time Purchase: Pay once, survive forever
+                      </span>
+                    </div>
+                  </div>
+
+                  <Link
+                    to={createPageUrl("UpsideDown")}
+                    className="inline-flex items-center gap-2 text-[#FF0F0F] hover:text-[#FF0F0F]/80 font-semibold transition-colors duration-300 group text-sm sm:text-base"
+                  >
+                    Learn more about Upside Down
                     <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>
