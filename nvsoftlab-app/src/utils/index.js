@@ -4,8 +4,8 @@ export const createPageUrl = (pageName) => {
       return "/";
     case "ExposedAI":
       return "/exposed-ai";
-    case "UpsideDown":
-      return "/upside-down";
+    case "StrangeTruths":
+      return "/strange-truths";
     case "HaveYouEver":
       return "/have-you-ever";
     case "DiceRoll":

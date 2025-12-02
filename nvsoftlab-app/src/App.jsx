@@ -9,7 +9,7 @@ import DiceRoll from "./pages/DiceRoll";
 import ExposedAI from "./pages/ExposedAI";
 import HaveYouEver from "./pages/HaveYouEver";
 import Home from "./pages/Home";
-import UpsideDown from "./pages/UpsideDown";
+import StrangeTruths from "./pages/StrangeTruths";
 import Layout from "./Layout";
 import ScrollToTop from "./components/ScrollToTop";
 import TagManager from 'react-gtm-module';
@@ -31,8 +31,8 @@ function LayoutWithLocation({ children }) {
     currentPageName = "Home";
   } else if (location.pathname === createPageUrl("ExposedAI")) {
     currentPageName = "ExposedAI";
-  } else if (location.pathname === createPageUrl("UpsideDown")) {
-    currentPageName = "UpsideDown";
+  } else if (location.pathname === createPageUrl("StrangeTruths")) {
+    currentPageName = "StrangeTruths";
   } else if (location.pathname === createPageUrl("HaveYouEver")) {
     currentPageName = "HaveYouEver";
   } else if (location.pathname === createPageUrl("DiceRoll")) {
@@ -51,7 +51,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/exposed-ai" element={<ExposedAI />} />
-          <Route path="/upside-down" element={<UpsideDown />} />
+          <Route path="/strange-truths" element={<StrangeTruths />} />
           <Route path="/have-you-ever" element={<HaveYouEver />} />
           <Route path="/dice-roll" element={<DiceRoll />} />
           <Route path="*" element={<Home />} />

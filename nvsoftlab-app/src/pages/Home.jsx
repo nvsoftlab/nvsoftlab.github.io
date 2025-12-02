@@ -19,7 +19,7 @@ import diceIcon from "../../src/assets/dice.png";
 import exposedAIIcon from "../../src/assets/exposed-ai.png";
 import haveYouEverIcon from "../../src/assets/have-you-ever.png";
 import tikTokIcon from "../../src/assets/tiktok.png";
-import upsideDownIcon from "../../src/assets/upside-down.png";
+import strangeTruthsIcon from "../../src/assets/upside-down.png";
 
 export default function Home() {
   const comingSoonApps = [
@@ -286,33 +286,33 @@ export default function Home() {
           </CardContent>
         </Card>
 
-        {/* Upside Down App Card */}
+        {/* Strange Truths App Card */}
         <Card className="bg-white/70 backdrop-blur-sm border-0 shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 group mt-6 sm:mt-8">
           <CardContent className="p-0">
             <div className="grid lg:grid-cols-2 gap-0">
               <div className="bg-[#050510] p-6 sm:p-8 lg:p-12 text-white relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-[#FF0F0F]/10 rounded-full -translate-y-8 sm:-translate-y-12 lg:-translate-y-16 translate-x-8 sm:translate-x-12 lg:translate-x-16"></div>
-                <div className="absolute bottom-0 left-0 w-12 h-12 sm:w-16 sm:h-16 lg:w-24 lg:h-24 bg-[#FF0F0F]/10 rounded-full translate-y-6 sm:translate-y-8 lg:translate-y-12 -translate-x-6 sm:-translate-x-8 lg:-translate-x-12"></div>
+                <div className="absolute top-0 right-0 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-[#B71C1C]/10 rounded-full -translate-y-8 sm:-translate-y-12 lg:-translate-y-16 translate-x-8 sm:translate-x-12 lg:translate-x-16"></div>
+                <div className="absolute bottom-0 left-0 w-12 h-12 sm:w-16 sm:h-16 lg:w-24 lg:h-24 bg-[#B71C1C]/10 rounded-full translate-y-6 sm:translate-y-8 lg:translate-y-12 -translate-x-6 sm:-translate-x-8 lg:-translate-x-12"></div>
 
                 <div className="relative z-10">
-                  <div className="w-14 h-14 lg:w-16 lg:h-16 bg-[#CC000000] border border-[#FF0F0F]/30 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-14 h-14 lg:w-16 lg:h-16 bg-black/80 border border-[#B71C1C]/30 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
                     <img
-                      src={upsideDownIcon}
-                      alt="Upside Down Icon"
+                      src={strangeTruthsIcon}
+                      alt="Strange Truths Icon"
                       className="w-10 h-10 lg:w-10 lg:h-10 object-contain"
                     />
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
-                    Upside Down
+                    Strange Truths
                   </h3>
                   <p className="text-white/90 mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg leading-relaxed">
-                    The ultimate fan party game with anomalies to test your survival skills and loyalty. Face tough choices, reveal secrets, and see who belongs in your party.
+                    Explore bizarre facts that test your knowledge. Choose your category and guess the truth. Is it real or fake? Face strange truths with shocking twists.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button
                       asChild
-                      className="bg-[#FF0F0F] hover:bg-[#FF0F0F]/90 text-white font-semibold px-4 py-2 sm:px-6 py-3 h-auto text-sm sm:text-base rounded-lg flex items-center gap-2 opacity-75 cursor-not-allowed"
+                      className="bg-[#B71C1C] hover:bg-[#B71C1C]/90 text-white font-semibold px-4 py-2 sm:px-6 py-3 h-auto text-sm sm:text-base rounded-lg flex items-center gap-2 opacity-75 cursor-not-allowed"
                       disabled
                     >
                       <a
@@ -338,7 +338,7 @@ export default function Home() {
 
                     <Button
                       asChild
-                      className="bg-[#FF0F0F] hover:bg-[#FF0F0F]/90 text-white font-semibold px-4 py-2 sm:px-6 py-3 h-auto text-sm sm:text-base rounded-lg flex items-center gap-2 opacity-75 cursor-not-allowed"
+                      className="bg-[#B71C1C] hover:bg-[#B71C1C]/90 text-white font-semibold px-4 py-2 sm:px-6 py-3 h-auto text-sm sm:text-base rounded-lg flex items-center gap-2 opacity-75 cursor-not-allowed"
                       disabled
                     >
                       <a
@@ -378,51 +378,51 @@ export default function Home() {
 
                   <div className="space-y-3 sm:space-y-4">
                     <div>
-                      <p className="font-semibold text-slate-900 text-base sm:text-lg mb-2">The Ultimate Fan Party Game</p>
+                      <p className="font-semibold text-slate-900 text-base sm:text-lg mb-2">Uncover Bizarre Facts</p>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-[#FF0F0F] rounded-full flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-[#B71C1C] rounded-full flex-shrink-0"></div>
                       <span className="text-slate-700 text-sm sm:text-base">
-                        Anomalies to test your survival skills & loyalty
+                        Explore bizarre facts that test your knowledge
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-[#FF0F0F] rounded-full flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-[#B71C1C] rounded-full flex-shrink-0"></div>
                       <span className="text-slate-700 text-sm sm:text-base">
-                        Choose your path: Survival, Hellfire Club, or 80s Nostalgia
+                        Choose your category and guess the truth
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-[#FF0F0F] rounded-full flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-[#B71C1C] rounded-full flex-shrink-0"></div>
                       <span className="text-slate-700 text-sm sm:text-base">
-                        Would You Ever? Face tough choices with shocking twists
+                        Is it real or fake? Face strange truths with shocking twists
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-[#FF0F0F] rounded-full flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-[#B71C1C] rounded-full flex-shrink-0"></div>
                       <span className="text-slate-700 text-sm sm:text-base">
-                        Reveal secrets and see who belongs in your Party
+                        Reveal secrets and see who knows the strangest truths
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-[#FF0F0F] rounded-full flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-[#B71C1C] rounded-full flex-shrink-0"></div>
                       <span className="text-slate-700 text-sm sm:text-base">
-                        AI Deck Generator: Create infinite custom timelines & theories
+                        Create custom categories
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-[#FF0F0F] rounded-full flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-[#B71C1C] rounded-full flex-shrink-0"></div>
                       <span className="text-slate-700 text-sm sm:text-base font-semibold">
-                        One-Time Purchase: Pay once, survive forever
+                        One-Time Purchase: Pay once, learn forever
                       </span>
                     </div>
                   </div>
 
                   <Link
-                    to={createPageUrl("UpsideDown")}
-                    className="inline-flex items-center gap-2 text-[#FF0F0F] hover:text-[#FF0F0F]/80 font-semibold transition-colors duration-300 group text-sm sm:text-base"
+                    to={createPageUrl("StrangeTruths")}
+                    className="inline-flex items-center gap-2 text-[#B71C1C] hover:text-[#B71C1C]/80 font-semibold transition-colors duration-300 group text-sm sm:text-base"
                   >
-                    Learn more about Upside Down
+                    Learn more about Strange Truths
                     <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>

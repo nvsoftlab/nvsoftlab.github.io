@@ -24,30 +24,30 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { createPageUrl } from "../utils";
 
-export default function UpsideDown() {
+export default function StrangeTruths() {
   const features = [
     {
       icon: <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />,
-      title: "Anomalies & Questions",
+      title: "Bizarre Facts & Questions",
       description:
-        "Test your survival skills with questions designed to spark debates and reveal secrets.",
+        "Test your knowledge with questions designed to spark debates and reveal secrets.",
     },
     {
       icon: <Gamepad2 className="w-5 h-5 sm:w-6 sm:h-6" />,
-      title: "Fan-Favorite Modes",
+      title: "Fun Game Modes",
       description:
-        "Select from Survival, Romance, Vecna's Curse, or create your own deck for a unique experience.",
+        "Select from different categories or create your own deck for a unique experience.",
     },
     {
       icon: <Heart className="w-5 h-5 sm:w-6 sm:h-6" />,
       title: "Debate & Laugh",
       description:
-        "When the \"Catch\" is revealed, defend your choice! Hear hilarious excuses and shocking admissions.",
+        "When the truth is revealed, defend your answer! Hear hilarious excuses and shocking admissions.",
     },
     {
       icon: <Settings className="w-5 h-5 sm:w-6 sm:h-6" />,
-      title: "Custom Timelines",
-      description: "Create your own custom cards and add inside jokes for your friends.",
+      title: "Custom Categories",
+      description: "Create your own custom categories and add inside jokes for your friends.",
     },
     {
       icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6" />,
@@ -66,21 +66,21 @@ export default function UpsideDown() {
   const howItWorks = [
     {
       step: "1",
-      title: "Choose Your Episode",
+      title: "Choose Your Category",
       description:
-        "Pick from Survival, Hellfire Club, 80s Nostalgia, or create your own custom timeline that matches your party's vibe.",
+        "Pick from a variety of categories or create your own custom deck that matches your party's vibe.",
     },
     {
       step: "2",
-      title: "Make Your Choice",
+      title: "Make Your Guess",
       description:
-        "Swipe RIGHT for \"I Would\" or LEFT for \"No Way\". Would you fight the monster or run? Be honest — friends don't lie!",
+        "Swipe RIGHT for \"True\" or LEFT for \"False\". Is the fact real or fake? Be honest — friends don't lie!",
     },
     {
       step: "3",
-      title: "Face the Consequences",
+      title: "Face the Truth",
       description:
-        "Read the \"Catch\" (clarification)! This is where the debates start — shocking twists and hilarious scenarios that test your loyalty to the party.",
+        "Read the answer! This is where the debates start — shocking twists and hilarious scenarios that test your knowledge.",
     },
   ];
 
@@ -99,27 +99,27 @@ export default function UpsideDown() {
 
       {/* Hero Section */}
       <div className="text-center mb-16 sm:mb-20">
-        <div className="inline-flex items-center gap-2 bg-[#CC000000] text-white/90 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-6 sm:mb-8 border border-[#FF0F0F]/30">
+        <div className="inline-flex items-center gap-2 bg-black/80 text-white/90 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-6 sm:mb-8 border border-[#B71C1C]/30">
           <Smartphone className="w-3 h-3 sm:w-4 sm:h-4" />
-          Fan Party Game App
+          Party Game App
         </div>
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-          Upside Down
-          <span className="text-[#FF0F0F] block">
-            The Ultimate Fan Party Game
+          Strange Truths
+          <span className="text-[#B71C1C] block">
+            Uncover Bizarre Facts
           </span>
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
-          Anomalies to test your survival skills & loyalty. Choose your path: Survival, Hellfire Club, or 80s Nostalgia. Would You Ever? Face tough choices with shocking twists.
+          Explore bizarre facts that test your knowledge. Choose your category and guess the truth. Is it real or fake? Face strange truths with shocking twists.
         </p>
 
         <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
           <Button
             asChild
             size="lg"
-            className="bg-[#FF0F0F] hover:bg-[#FF0F0F]/90 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3 opacity-75 cursor-not-allowed"
+            className="bg-[#B71C1C] hover:bg-[#B71C1C]/90 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3 opacity-75 cursor-not-allowed"
             disabled
           >
             <a
@@ -146,7 +146,7 @@ export default function UpsideDown() {
           <Button
             asChild
             size="lg"
-            className="bg-[#FF0F0F] hover:bg-[#FF0F0F]/90 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3 opacity-75 cursor-not-allowed"
+            className="bg-[#B71C1C] hover:bg-[#B71C1C]/90 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3 opacity-75 cursor-not-allowed"
             disabled
           >
             <a
@@ -173,17 +173,17 @@ export default function UpsideDown() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-white/90 text-sm sm:text-base">
           <div className="flex items-center gap-3">
-            <Star className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF0F0F]" />
+            <Star className="w-4 h-4 sm:w-5 sm:h-5 text-[#B71C1C]" />
             <span className="font-semibold">Coming Soon</span>
           </div>
           <div className="hidden sm:block w-px h-4 bg-white/30"></div>
           <div className="flex items-center gap-3">
-            <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF0F0F]" />
-            <span className="font-semibold">Anomalies & Questions</span>
+            <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#B71C1C]" />
+            <span className="font-semibold">Bizarre Facts & Questions</span>
           </div>
           <div className="hidden sm:block w-px h-4 bg-white/30"></div>
           <div className="flex items-center gap-3">
-            <Smartphone className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF0F0F]" />
+            <Smartphone className="w-4 h-4 sm:w-5 sm:h-5 text-[#B71C1C]" />
             <span className="font-semibold">iOS & Android</span>
           </div>
         </div>
@@ -196,7 +196,7 @@ export default function UpsideDown() {
             How It Works
           </h2>
           <p className="text-base sm:text-lg text-white/90">
-            Three simple steps to test your survival skills
+            Three simple steps to test your knowledge
           </p>
         </div>
 
@@ -204,15 +204,15 @@ export default function UpsideDown() {
           {howItWorks.map((item, index) => (
             <Card
               key={index}
-              className="bg-[#CC000000] border border-[#FF0F0F]/30 shadow-lg hover:shadow-xl hover:border-[#FF0F0F]/50 transition-all duration-300 group overflow-hidden"
+              className="bg-black/80 border border-[#B71C1C]/30 shadow-lg hover:shadow-xl hover:border-[#B71C1C]/50 transition-all duration-300 group overflow-hidden"
             >
               <CardContent className="p-6 sm:p-8">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#FF0F0F] rounded-full flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#B71C1C] rounded-full flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white font-bold text-xl sm:text-2xl">
                     {item.step}
                   </span>
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 group-hover:text-[#FF0F0F] transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 group-hover:text-[#B71C1C] transition-colors duration-300">
                   {item.title}
                 </h3>
                 <p className="text-sm sm:text-base text-white/90 leading-relaxed">
@@ -231,14 +231,14 @@ export default function UpsideDown() {
             Perfect For
           </h2>
           <p className="text-base sm:text-lg text-white/90">
-            Whether you are a die-hard fan or just love 80s horror
+            Whether you are a trivia master or just love strange facts
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          <Card className="bg-[#CC000000] border border-[#FF0F0F]/30 shadow-lg hover:shadow-xl hover:border-[#FF0F0F]/50 transition-all duration-300">
+          <Card className="bg-black/80 border border-[#B71C1C]/30 shadow-lg hover:shadow-xl hover:border-[#B71C1C]/50 transition-all duration-300">
             <CardContent className="p-6 text-center">
-              <div className="w-12 h-12 bg-[#FF0F0F] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-[#B71C1C] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Tv className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-bold text-white mb-2">
@@ -250,9 +250,9 @@ export default function UpsideDown() {
             </CardContent>
           </Card>
 
-          <Card className="bg-[#CC000000] border border-[#FF0F0F]/30 shadow-lg hover:shadow-xl hover:border-[#FF0F0F]/50 transition-all duration-300">
+          <Card className="bg-black/80 border border-[#B71C1C]/30 shadow-lg hover:shadow-xl hover:border-[#B71C1C]/50 transition-all duration-300">
             <CardContent className="p-6 text-center">
-              <div className="w-12 h-12 bg-[#FF0F0F] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-[#B71C1C] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Bed className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-bold text-white mb-2">
@@ -264,9 +264,9 @@ export default function UpsideDown() {
             </CardContent>
           </Card>
 
-          <Card className="bg-[#CC000000] border border-[#FF0F0F]/30 shadow-lg hover:shadow-xl hover:border-[#FF0F0F]/50 transition-all duration-300">
+          <Card className="bg-black/80 border border-[#B71C1C]/30 shadow-lg hover:shadow-xl hover:border-[#B71C1C]/50 transition-all duration-300">
             <CardContent className="p-6 text-center">
-              <div className="w-12 h-12 bg-[#FF0F0F] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-[#B71C1C] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Car className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-bold text-white mb-2">
@@ -278,16 +278,16 @@ export default function UpsideDown() {
             </CardContent>
           </Card>
 
-          <Card className="bg-[#CC000000] border border-[#FF0F0F]/30 shadow-lg hover:shadow-xl hover:border-[#FF0F0F]/50 transition-all duration-300">
+          <Card className="bg-black/80 border border-[#B71C1C]/30 shadow-lg hover:shadow-xl hover:border-[#B71C1C]/50 transition-all duration-300">
             <CardContent className="p-6 text-center">
-              <div className="w-12 h-12 bg-[#FF0F0F] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-[#B71C1C] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-bold text-white mb-2">
                 Ice Breakers
               </h3>
               <p className="text-sm text-white/90">
-                Find out who in your group would survive the Upside Down.
+                Find out who in your group knows the strangest truths.
               </p>
             </CardContent>
           </Card>
@@ -298,10 +298,10 @@ export default function UpsideDown() {
       <div className="mb-16 sm:mb-20">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">
-            Why Choose Upside Down?
+            Why Choose Strange Truths?
           </h2>
           <p className="text-base sm:text-lg text-white/90">
-            Packed with anomalies that make every game night unforgettable
+            Packed with bizarre facts that make every game night unforgettable
           </p>
         </div>
 
@@ -309,13 +309,13 @@ export default function UpsideDown() {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="bg-[#CC000000] border border-[#FF0F0F]/30 shadow-lg hover:shadow-xl hover:border-[#FF0F0F]/50 transition-all duration-300 group overflow-hidden"
+              className="bg-black/80 border border-[#B71C1C]/30 shadow-lg hover:shadow-xl hover:border-[#B71C1C]/50 transition-all duration-300 group overflow-hidden"
             >
               <CardContent className="p-4 sm:p-6">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#FF0F0F] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#B71C1C] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-[#FF0F0F] transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-[#B71C1C] transition-colors duration-300">
                   {feature.title}
                 </h3>
                 <p className="text-sm sm:text-base text-white/90 leading-relaxed">
@@ -328,19 +328,19 @@ export default function UpsideDown() {
       </div>
 
       {/* Download Section */}
-      <div className="text-center bg-[#CC000000] border border-[#FF0F0F]/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+      <div className="text-center bg-black/80 border border-[#B71C1C]/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
         <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">
-          Ready to Enter the Void?
+          Ready to Uncover the Truth?
         </h2>
         <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto">
-          Download Upside Down now and transform your hangouts into exciting adventures of survival, laughter, and 80s nostalgia!
+          Download Strange Truths now and transform your hangouts into exciting adventures of bizarre facts, laughter, and fun!
         </p>
 
         <div className="flex flex-row items-center justify-center gap-3 sm:gap-4">
           <Button
             asChild
             size="lg"
-            className="bg-[#FF0F0F] hover:bg-[#FF0F0F]/90 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3 opacity-75 cursor-not-allowed"
+            className="bg-[#B71C1C] hover:bg-[#B71C1C]/90 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3 opacity-75 cursor-not-allowed"
             disabled
           >
             <a
@@ -367,7 +367,7 @@ export default function UpsideDown() {
           <Button
             asChild
             size="lg"
-            className="bg-[#FF0F0F] hover:bg-[#FF0F0F]/90 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3 opacity-75 cursor-not-allowed"
+            className="bg-[#B71C1C] hover:bg-[#B71C1C]/90 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3 opacity-75 cursor-not-allowed"
             disabled
           >
             <a
