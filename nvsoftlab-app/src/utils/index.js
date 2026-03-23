@@ -10,6 +10,10 @@ export const createPageUrl = (pageName) => {
       return "/have-you-ever";
     case "DiceRoll":
       return "/dice-roll";
+    case "PartyDeck":
+      return "/";
+    case "OtherApps":
+      return "/other-apps";
     default:
       return "/";
   }

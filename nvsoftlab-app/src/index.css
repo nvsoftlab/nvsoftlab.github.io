@@ -12,10 +12,11 @@ html,
 body {
   height: 100%;
   overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+  background-color: #0f0a1e; /* Dark bg on overscroll — no white edges */
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Nunito', sans-serif;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
@@ -32,7 +33,6 @@ body {
 
 /* Mobile-specific improvements */
 @media (max-width: 640px) {
-  /* Ensure buttons are touch-friendly */
   button,
   a,
   [role='button'] {
@@ -40,7 +40,6 @@ body {
     min-width: 44px;
   }
 
-  /* Improve text readability on small screens */
   p,
   span,
   div {
@@ -48,7 +47,6 @@ body {
     overflow-wrap: break-word;
   }
 
-  /* Prevent horizontal overflow */
   .max-w-6xl {
     max-width: 100%;
     padding-left: 1rem;
@@ -56,28 +54,26 @@ body {
   }
 }
 
-/* Smooth scrolling for better mobile experience */
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Improve focus states for accessibility */
+/* Focus states */
 button:focus,
 a:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid #0ea5e9;
+  outline: 2px solid #f97316;
   outline-offset: 2px;
 }
 
-/* Better touch targets for mobile */
 @media (max-width: 640px) {
   .flex.gap-2 > * {
     min-height: 44px;
   }
 
-  /* Ensure proper spacing on mobile */
   .space-y-4 > * + * {
     margin-top: 1rem;
   }
@@ -85,10 +81,240 @@ select:focus {
   .space-y-6 > * + * {
     margin-top: 1.5rem;
   }
+}
 
-  /* Better mobile card layout */
-  .bg-white\/70 {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-16px); }
+}
+
+@keyframes floatYAlt {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50%       { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(249, 115, 22, 0.5), 0 0 60px rgba(168, 85, 247, 0.3);
   }
+  50% {
+    box-shadow: 0 0 55px rgba(249, 115, 22, 0.9), 0 0 120px rgba(168, 85, 247, 0.6);
+  }
+}
+
+@keyframes shimmerBg {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes bounceDot {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
+  40%           { transform: scale(1); opacity: 1; }
+}
+
+@keyframes preloaderOut {
+  0%   { opacity: 1; visibility: visible; }
+  85%  { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes preloaderLogo {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.04); }
+}
+
+/* ---- Utility animation classes ---- */
+
+.anim-fade-in-up   { opacity: 0; animation: fadeInUp 0.7s ease-out forwards; }
+.anim-fade-in-down { opacity: 0; animation: fadeInDown 0.6s ease-out forwards; }
+.anim-fade-in      { opacity: 0; animation: fadeIn 0.6s ease-out forwards; }
+.anim-slide-left   { opacity: 0; animation: slideInLeft 0.7s ease-out forwards; }
+.anim-slide-right  { opacity: 0; animation: slideInRight 0.7s ease-out forwards; }
+.anim-scale-in     { opacity: 0; animation: scaleIn 0.6s ease-out forwards; }
+.anim-float        { animation: floatY 4s ease-in-out infinite; }
+.anim-float-alt    { animation: floatYAlt 5s ease-in-out infinite; }
+.anim-pulse-glow   { animation: pulseGlow 2.5s ease-in-out infinite; }
+
+/* Stagger delay helpers */
+.d-0   { animation-delay: 0s;    }
+.d-100 { animation-delay: 0.1s;  }
+.d-200 { animation-delay: 0.2s;  }
+.d-300 { animation-delay: 0.3s;  }
+.d-400 { animation-delay: 0.4s;  }
+.d-500 { animation-delay: 0.5s;  }
+.d-600 { animation-delay: 0.6s;  }
+.d-700 { animation-delay: 0.7s;  }
+.d-800 { animation-delay: 0.8s;  }
+.d-900 { animation-delay: 0.9s;  }
+.d-1000 { animation-delay: 1.0s; }
+.d-1200 { animation-delay: 1.2s; }
+
+/* ---- Scroll-reveal classes ---- */
+/* Added by useScrollReveal hook via IntersectionObserver */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.88);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Pop-in: springy scale+fade used for game grid cards */
+.reveal-pop {
+  opacity: 0;
+  transform: scale(0.78) translateY(22px);
+  transition: opacity 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.reveal-pop.revealed {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Stagger for grid children via CSS nth-child */
+.stagger-children > *:nth-child(1) { transition-delay: 0.0s; }
+.stagger-children > *:nth-child(2) { transition-delay: 0.08s; }
+.stagger-children > *:nth-child(3) { transition-delay: 0.16s; }
+.stagger-children > *:nth-child(4) { transition-delay: 0.24s; }
+.stagger-children > *:nth-child(5) { transition-delay: 0.32s; }
+.stagger-children > *:nth-child(6) { transition-delay: 0.40s; }
+.stagger-children > *:nth-child(7) { transition-delay: 0.48s; }
+.stagger-children > *:nth-child(8) { transition-delay: 0.56s; }
+.stagger-children > *:nth-child(9) { transition-delay: 0.64s; }
+.stagger-children > *:nth-child(10) { transition-delay: 0.72s; }
+.stagger-children > *:nth-child(11) { transition-delay: 0.80s; }
+.stagger-children > *:nth-child(12) { transition-delay: 0.88s; }
+
+/* ---- Preloader ---- */
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: preloaderOut 0.5s ease-out forwards 1.6s;
+  pointer-events: none;
+}
+
+#preloader img {
+  width: min(320px, 80vw);
+  animation: preloaderLogo 1s ease-in-out infinite;
+}
+
+#preloader.done {
+  display: none;
+}
+
+/* Loading dots */
+.loader-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #a855f7;
+  animation: bounceDot 1.4s ease-in-out infinite;
+}
+.loader-dot:nth-child(1) { animation-delay: 0s; }
+.loader-dot:nth-child(2) { animation-delay: 0.2s; }
+.loader-dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* Shimmer gradient text */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #f97316 0%,
+    #ec4899 25%,
+    #a855f7 50%,
+    #ec4899 75%,
+    #f97316 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerBg 3s linear infinite;
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(168, 85, 247, 0.2);
 }

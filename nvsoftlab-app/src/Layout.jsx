@@ -1,29 +1,43 @@
-import { Gamepad2, Heart, Home, Menu, MessageCircle, Moon, Sparkles, X } from "lucide-react";
+import { Gamepad2, Menu, Smartphone, X } from "lucide-react";
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
 import { createPageUrl } from "./utils";
 import nvSoftLabIcon from "/favicon.png";
 
+const NAV_LINKS = [
+  {
+    key: "PartyDeck",
+    label: "Party Deck",
+    Icon: Gamepad2,
+    activeColor: "text-orange-300 bg-gradient-to-r from-orange-500/20 to-purple-500/20",
+  },
+  {
+    key: "OtherApps",
+    label: "Other Apps",
+    Icon: Smartphone,
+    activeColor: "text-white bg-white/10",
+  },
+];
+
+const INSTAGRAM_URL = "https://www.instagram.com/nvsoftlab";
+const TIKTOK_URL    = "https://www.tiktok.com/@nvsoftlab";
+
 export default function Layout({ children, currentPageName }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <div className={`min-h-screen ${currentPageName === "StrangeTruths" ? "bg-[#050510]" : "bg-gradient-to-br from-slate-50 via-teal-50 to-purple-50"}`}>
-      <nav className="bg-white/80 backdrop-blur-md border-b border-slate-200/50 sticky top-0 z-50">
+    <div className="min-h-screen bg-[#0f0a1e] font-nunito">
+
+      {/* ── Navbar ── */}
+      <nav className="bg-[#0f0a1e]/90 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
+
+            {/* Logo */}
             <Link
-              to={createPageUrl("Home")}
-              className="flex items-center gap-2 sm:gap-3 group transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 rounded-lg"
+              to={createPageUrl("PartyDeck")}
+              className="flex items-center gap-2 sm:gap-3 group transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#0f0a1e] rounded-lg"
               onClick={closeMobileMenu}
             >
               <img
@@ -32,161 +46,68 @@ export default function Layout({ children, currentPageName }) {
                 className="w-10 h-10 sm:w-12 sm:h-12 object-contain group-hover:scale-105 transition-transform duration-300"
               />
               <div>
-                <h1 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-teal-600 to-purple-600 bg-clip-text text-transparent group-hover:from-teal-700 group-hover:to-purple-700 transition-all duration-300">
+                <h1 className="text-lg sm:text-xl font-black bg-gradient-to-r from-orange-400 to-purple-400 bg-clip-text text-transparent">
                   NVSoftLab
                 </h1>
-                <p className="text-xs text-slate-500 -mt-1 hidden sm:block">
-                  Mobile App Studio
-                </p>
+                <p className="text-xs text-purple-400 -mt-1 hidden sm:block">Mobile App Studio</p>
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-4 sm:gap-6">
-              <Link
-                to={createPageUrl("Home")}
-                className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 text-sm sm:text-base ${
-                  currentPageName === "Home"
-                    ? "bg-gradient-to-r from-teal-100 to-purple-100 text-teal-700"
-                    : "text-slate-600 hover:text-teal-600 hover:bg-teal-50"
-                }`}
-              >
-                <Home className="w-4 h-4" />
-                <span className="font-medium">Home</span>
-              </Link>
-              
-              <Link
-                to={createPageUrl("ExposedAI")}
-                className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-sm sm:text-base ${
-                  currentPageName === "ExposedAI"
-                    ? "bg-gradient-to-r from-red-100 to-pink-100 text-red-700"
-                    : "text-slate-600 hover:text-red-600 hover:bg-red-50"
-                }`}
-              >
-                <Heart className="w-4 h-4" />
-                <span className="font-medium">Exposed AI</span>
-              </Link>
-              
-              <Link
-                to={createPageUrl("StrangeTruths")}
-                className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-sm sm:text-base ${
-                  currentPageName === "StrangeTruths"
-                    ? "bg-gradient-to-r from-red-900 to-black text-white"
-                    : "text-slate-600 hover:text-red-600 hover:bg-red-50"
-                }`}
-              >
-                <Sparkles className="w-4 h-4" />
-                <span className="font-medium">Strange Truths</span>
-              </Link>
-              
-              <Link
-                to={createPageUrl("HaveYouEver")}
-                className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 text-sm sm:text-base ${
-                  currentPageName === "HaveYouEver"
-                    ? "bg-gradient-to-r from-pink-100 to-purple-100 text-pink-700"
-                    : "text-slate-600 hover:text-pink-600 hover:bg-pink-50"
-                }`}
-              >
-                <MessageCircle className="w-4 h-4" />
-                <span className="font-medium">Have You Ever</span>
-              </Link>
-              
-              <Link
-                to={createPageUrl("DiceRoll")}
-                className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 text-sm sm:text-base ${
-                  currentPageName === "DiceRoll"
-                    ? "bg-gradient-to-r from-teal-100 to-purple-100 text-teal-700"
-                    : "text-slate-600 hover:text-teal-600 hover:bg-teal-50"
-                }`}
-              >
-                <Gamepad2 className="w-4 h-4" />
-                <span className="font-medium">Dice Roll</span>
-              </Link>
+            {/* Desktop nav */}
+            <div className="hidden md:flex items-center gap-2">
+              {NAV_LINKS.map((link) => {
+                const NavIcon = link.Icon;
+                const isActive = currentPageName === link.key;
+                return (
+                  <Link
+                    key={link.key}
+                    to={createPageUrl(link.key)}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 text-sm font-bold focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#0f0a1e] ${
+                      isActive ? link.activeColor : "text-purple-300 hover:text-white hover:bg-white/5"
+                    }`}
+                  >
+                    <NavIcon className="w-4 h-4" />
+                    <span>{link.label}</span>
+                  </Link>
+                );
+              })}
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile menu button */}
             <button
-              onClick={toggleMobileMenu}
-              className="md:hidden flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-lg hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-colors duration-200"
+              onClick={() => setIsMobileMenuOpen((v) => !v)}
+              className="md:hidden flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#0f0a1e] transition-colors duration-200"
               aria-label="Toggle mobile menu"
               aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? (
-                <X className="w-5 h-5 sm:w-6 sm:h-6 text-slate-600" />
-              ) : (
-                <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-slate-600" />
-              )}
+              {isMobileMenuOpen
+                ? <X className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                : <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+              }
             </button>
           </div>
 
-          {/* Mobile Navigation Menu */}
+          {/* Mobile dropdown */}
           {isMobileMenuOpen && (
-            <div className="md:hidden mt-3 sm:mt-4 pb-3 sm:pb-4 border-t border-slate-200/50">
-              <div className="flex flex-col gap-2 pt-3 sm:pt-4">
-                <Link
-                  to={createPageUrl("Home")}
-                  className={`flex items-center gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 text-sm sm:text-base ${
-                    currentPageName === "Home"
-                      ? "bg-gradient-to-r from-teal-100 to-purple-100 text-teal-700"
-                      : "text-slate-600 hover:text-teal-600 hover:bg-teal-50"
-                  }`}
-                  onClick={closeMobileMenu}
-                >
-                  <Home className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span className="font-medium">Home</span>
-                </Link>
-                
-                <Link
-                  to={createPageUrl("ExposedAI")}
-                  className={`flex items-center gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-sm sm:text-base ${
-                    currentPageName === "ExposedAI"
-                      ? "bg-gradient-to-r from-red-100 to-pink-100 text-red-700"
-                      : "text-slate-600 hover:text-red-600 hover:bg-red-50"
-                  }`}
-                  onClick={closeMobileMenu}
-                >
-                  <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span className="font-medium">Exposed AI</span>
-                </Link>
-                
-                <Link
-                  to={createPageUrl("StrangeTruths")}
-                  className={`flex items-center gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-sm sm:text-base ${
-                    currentPageName === "StrangeTruths"
-                      ? "bg-gradient-to-r from-red-900 to-black text-white"
-                      : "text-slate-600 hover:text-red-600 hover:bg-red-50"
-                  }`}
-                  onClick={closeMobileMenu}
-                >
-                  <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span className="font-medium">Strange Truths</span>
-                </Link>
-                
-                <Link
-                  to={createPageUrl("HaveYouEver")}
-                  className={`flex items-center gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 text-sm sm:text-base ${
-                    currentPageName === "HaveYouEver"
-                      ? "bg-gradient-to-r from-pink-100 to-purple-100 text-pink-700"
-                      : "text-slate-600 hover:text-pink-600 hover:bg-pink-50"
-                  }`}
-                  onClick={closeMobileMenu}
-                >
-                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span className="font-medium">Have You Ever</span>
-                </Link>
-                
-                <Link
-                  to={createPageUrl("DiceRoll")}
-                  className={`flex items-center gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 text-sm sm:text-base ${
-                    currentPageName === "DiceRoll"
-                      ? "bg-gradient-to-r from-teal-100 to-purple-100 text-teal-700"
-                      : "text-slate-600 hover:text-teal-600 hover:bg-teal-50"
-                  }`}
-                  onClick={closeMobileMenu}
-                >
-                  <Gamepad2 className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span className="font-medium">Dice Roll</span>
-                </Link>
+            <div className="md:hidden mt-3 pb-3 border-t border-white/10">
+              <div className="flex flex-col gap-1 pt-3">
+                {NAV_LINKS.map((link) => {
+                  const NavIcon = link.Icon;
+                  const isActive = currentPageName === link.key;
+                  return (
+                    <Link
+                      key={link.key}
+                      to={createPageUrl(link.key)}
+                      className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 text-sm font-bold focus:outline-none focus:ring-2 focus:ring-orange-500 ${
+                        isActive ? link.activeColor : "text-purple-300 hover:text-white hover:bg-white/5"
+                      }`}
+                      onClick={closeMobileMenu}
+                    >
+                      <NavIcon className="w-5 h-5" />
+                      <span>{link.label}</span>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           )}
@@ -195,11 +116,55 @@ export default function Layout({ children, currentPageName }) {
 
       <main className="flex-1">{children}</main>
 
-      <footer className="bg-white/60 backdrop-blur-md border-t border-slate-200/50 mt-16 sm:mt-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 text-center">
-          <p className="text-sm sm:text-base text-slate-600">
-            © 2025 NVSoftLab. Crafting mobile experiences with passion.
-          </p>
+      {/* ── Footer ── */}
+      <footer className="bg-[#0f0a1e] border-t border-white/10 mt-16 sm:mt-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+
+          {/* Social links */}
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="NVSoftLab on Instagram"
+              className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white/80 font-bold text-sm hover:bg-white/10 hover:text-white hover:border-white/25 transition-all duration-200"
+            >
+              {/* Instagram gradient icon */}
+              <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none">
+                <defs>
+                  <linearGradient id="ig-footer" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stopColor="#f9a825"/>
+                    <stop offset="50%" stopColor="#e91e63"/>
+                    <stop offset="100%" stopColor="#9c27b0"/>
+                  </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="url(#ig-footer)" strokeWidth="1.8"/>
+                <circle cx="12" cy="12" r="4.5" stroke="url(#ig-footer)" strokeWidth="1.8"/>
+                <circle cx="17.5" cy="6.5" r="1.2" fill="url(#ig-footer)"/>
+              </svg>
+              Instagram
+            </a>
+
+            <a
+              href={TIKTOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="NVSoftLab on TikTok"
+              className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white/80 font-bold text-sm hover:bg-white/10 hover:text-white hover:border-white/25 transition-all duration-200"
+            >
+              {/* TikTok icon */}
+              <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.3 6.3 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.14 8.14 0 0 0 4.77 1.52V6.74a4.85 4.85 0 0 1-1-.05z"/>
+              </svg>
+              TikTok
+            </a>
+          </div>
+
+          <div className="text-center">
+            <p className="text-sm text-purple-400">
+              © 2026 NVSoftLab · Crafting games that bring people together, one laugh at a time.
+            </p>
+          </div>
         </div>
       </footer>
     </div>
