@@ -45,11 +45,11 @@ export default function Layout({ children, currentPageName }) {
                 alt="NVSoftLab Logo"
                 className="w-10 h-10 sm:w-12 sm:h-12 object-contain group-hover:scale-105 transition-transform duration-300"
               />
-              <div>
-                <h1 className="text-lg sm:text-xl font-black bg-gradient-to-r from-orange-400 to-purple-400 bg-clip-text text-transparent">
+              <div className="flex flex-col justify-center">
+                <h1 className="text-lg sm:text-xl font-black bg-gradient-to-r from-orange-400 to-purple-400 bg-clip-text text-transparent leading-none">
                   NVSoftLab
                 </h1>
-                <p className="text-xs text-purple-400 -mt-1 hidden sm:block">Mobile App Studio</p>
+                <p className="text-xs text-purple-400 mt-0.5 hidden sm:block leading-none">Mobile App Studio</p>
               </div>
             </Link>
 

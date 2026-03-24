@@ -70,10 +70,6 @@ select:focus {
 }
 
 @media (max-width: 640px) {
-  .flex.gap-2 > * {
-    min-height: 44px;
-  }
-
   .space-y-4 > * + * {
     margin-top: 1rem;
   }
