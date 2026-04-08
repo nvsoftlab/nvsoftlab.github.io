@@ -162,7 +162,7 @@ export default function Layout({ children, currentPageName }) {
 
           <div className="text-center">
             <p className="text-sm text-purple-400">
-              © 2026 NVSoftLab · Crafting games that bring people together, one laugh at a time.
+              © 2026 NVSoftLab · Crafting games that bring people together.
             </p>
           </div>
         </div>

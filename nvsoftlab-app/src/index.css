@@ -12,7 +12,7 @@ html,
 body {
   height: 100%;
   overflow-x: hidden; /* Prevent horizontal scroll on mobile */
-  background-color: #0f0a1e; /* Dark bg on overscroll — no white edges */
+  background-color: #0f0a1e; /* Dark bg on overscroll - no white edges */
 }
 
 body {
@@ -142,22 +142,6 @@ select:focus {
   to   { transform: rotate(360deg); }
 }
 
-@keyframes bounceDot {
-  0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
-  40%           { transform: scale(1); opacity: 1; }
-}
-
-@keyframes preloaderOut {
-  0%   { opacity: 1; visibility: visible; }
-  85%  { opacity: 1; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
-@keyframes preloaderLogo {
-  0%, 100% { transform: scale(1); }
-  50%       { transform: scale(1.04); }
-}
-
 /* ---- Utility animation classes ---- */
 
 .anim-fade-in-up   { opacity: 0; animation: fadeInUp 0.7s ease-out forwards; }
@@ -252,42 +236,6 @@ select:focus {
 .stagger-children > *:nth-child(10) { transition-delay: 0.72s; }
 .stagger-children > *:nth-child(11) { transition-delay: 0.80s; }
 .stagger-children > *:nth-child(12) { transition-delay: 0.88s; }
-
-/* ---- Preloader ---- */
-
-#preloader {
-  position: fixed;
-  inset: 0;
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  animation: preloaderOut 0.5s ease-out forwards 1.6s;
-  pointer-events: none;
-}
-
-#preloader img {
-  width: min(320px, 80vw);
-  animation: preloaderLogo 1s ease-in-out infinite;
-}
-
-#preloader.done {
-  display: none;
-}
-
-/* Loading dots */
-.loader-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #a855f7;
-  animation: bounceDot 1.4s ease-in-out infinite;
-}
-.loader-dot:nth-child(1) { animation-delay: 0s; }
-.loader-dot:nth-child(2) { animation-delay: 0.2s; }
-.loader-dot:nth-child(3) { animation-delay: 0.4s; }
 
 /* Shimmer gradient text */
 .shimmer-text {

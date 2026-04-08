@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import {
   Route,
   BrowserRouter as Router,
@@ -18,36 +17,10 @@ import TagManager from "react-gtm-module";
 import { createPageUrl } from "./utils";
 import useUTMTracking from "./hooks/useUTMTracking";
 
-// TODO: import partyDeckLogo from "./assets/party-deck-logo.png";
-
 const tagManagerArgs = {
   gtmId: "GTM-WBJFJT34",
 };
 TagManager.initialize(tagManagerArgs);
-
-function Preloader() {
-  useEffect(() => {
-    const el = document.getElementById("preloader");
-    const timer = setTimeout(() => {
-      if (el) el.classList.add("done");
-    }, 2200);
-    return () => clearTimeout(timer);
-  }, []);
-
-  return (
-    <div id="preloader">
-      {/* Replace the emoji below with:
-          <img src={partyDeckLogo} alt="Party Deck" />
-          once src/assets/party-deck-logo.png is added */}
-      <div style={{ fontSize: 72 }}>🎉</div>
-      <div style={{ display: "flex", gap: 10, marginTop: 24 }}>
-        <div className="loader-dot" />
-        <div className="loader-dot" />
-        <div className="loader-dot" />
-      </div>
-    </div>
-  );
-}
 
 function LayoutWithLocation({ children }) {
   const location = useLocation();
@@ -74,7 +47,6 @@ export default function App() {
 
   return (
     <>
-      <Preloader />
       <Router>
         <ScrollToTop />
         <LayoutWithLocation>

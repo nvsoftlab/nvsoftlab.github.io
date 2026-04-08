@@ -36,7 +36,7 @@ const OTHER_APPS = [
     platform: "Google Play",
     tags: ["Friends & Couples", "30+ Categories", "1500+ Questions"],
     description:
-      "The party game that never gets old. 1500+ questions across 30+ categories — from laugh-out-loud funny to surprisingly personal. Works for any group, any vibe.",
+      "The party game that never gets old. 1500+ questions across 30+ categories - from laugh-out-loud funny to surprisingly personal. Works for any group, any vibe.",
     icon: haveYouEverIcon,
   },
   {
@@ -51,7 +51,7 @@ const OTHER_APPS = [
     platform: "Coming Soon",
     tags: ["Trivia", "Bizarre Facts", "True or False"],
     description:
-      "Swipe through genuinely shocking facts and decide — real or fake? The kind of trivia that starts arguments and makes everyone feel smarter (or dumber).",
+      "Swipe through genuinely shocking facts and decide - real or fake? The kind of trivia that starts arguments and makes everyone feel smarter (or dumber).",
     icon: strangeTruthsIcon,
   },
   {
@@ -66,7 +66,7 @@ const OTHER_APPS = [
     platform: "App Store & Google Play",
     tags: ["D&D", "Tabletop RPG", "All Dice Types"],
     description:
-      "D4 through D20, always in your pocket. Clean design, instant rolls, zero distractions — for when the dungeon master calls and your dice bag is at home.",
+      "D4 through D20, always in your pocket. Clean design, instant rolls, zero distractions - for when the dungeon master calls and your dice bag is at home.",
     icon: diceIcon,
   },
 ];
@@ -106,11 +106,7 @@ export default function OtherApps() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-4 py-2 text-white font-bold text-sm hover:bg-white/20 hover:border-white/40 transition-all duration-200"
             >
-              <svg
-                className="w-4 h-4"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
                 <defs>
                   <linearGradient
                     id="ig"
@@ -151,11 +147,7 @@ export default function OtherApps() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-4 py-2 text-white font-bold text-sm hover:bg-white/20 hover:border-white/40 transition-all duration-200"
             >
-              <svg
-                className="w-4 h-4"
-                viewBox="0 0 24 24"
-                fill="white"
-              >
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="white">
                 <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.3 6.3 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.14 8.14 0 0 0 4.77 1.52V6.74a4.85 4.85 0 0 1-1-.05z" />
               </svg>
               TikTok

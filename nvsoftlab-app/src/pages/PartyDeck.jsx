@@ -38,13 +38,13 @@ const GAMES = [
   },
   {
     name: "Alias",
-    desc: "Race the clock — describe without saying",
+    desc: "Race the clock - describe without saying",
     img: aliasImg,
     gradient: "from-yellow-400 to-orange-500",
   },
   {
     name: "Impostor",
-    desc: "One liar, one word — can you find them?",
+    desc: "One liar, one word - can you find them?",
     img: impostorImg,
     gradient: "from-purple-500 to-violet-700",
   },
@@ -56,13 +56,13 @@ const GAMES = [
   },
   {
     name: "Charades Up",
-    desc: "Act it out — no words allowed",
+    desc: "Act it out - no words allowed",
     img: charadesImg,
     gradient: "from-green-400 to-teal-600",
   },
   {
     name: "Would You Rather",
-    desc: "Pick a side — no easy answers here",
+    desc: "Pick a side - no easy answers here",
     img: wyrImg,
     gradient: "from-cyan-500 to-blue-600",
   },
@@ -80,13 +80,13 @@ const GAMES = [
   },
   {
     name: "Word Rush",
-    desc: "Spell fast, think faster — letters flying, time running out",
+    desc: "Spell fast, think faster - letters flying, time running out",
     img: wldrshImg,
     gradient: "from-sky-400 to-blue-600",
   },
   {
     name: "Bomb",
-    desc: "Pass it quick — the bomb explodes when time runs out",
+    desc: "Pass it quick - the bomb explodes when time runs out",
     img: bombImg,
     gradient: "from-red-600 to-rose-800",
   },
@@ -115,7 +115,7 @@ const FEATURED_GAMES = [
     name: "Alias",
     tagline: "The ultimate word-guessing showdown",
     description:
-      "One player describes, the rest guess — but the clock is ticking. The faster you talk, the more you score. Teams go head-to-head in a battle of quick thinking and even quicker tongues.",
+      "One player describes, the rest guess - but the clock is ticking. The faster you talk, the more you score. Teams go head-to-head in a battle of quick thinking and even quicker tongues.",
     players: "2 – 10 players",
     duration: "20 – 60 min",
     category: "Word Game",
@@ -126,7 +126,7 @@ const FEATURED_GAMES = [
     glow: "shadow-orange-500/40",
     howToPlay: [
       "Split into two or more teams",
-      "One player describes words — no saying the word itself",
+      "One player describes words - no saying the word itself",
       "Teammates guess as many as they can before time runs out",
       "Switch turns and see who scores the most",
     ],
@@ -135,7 +135,7 @@ const FEATURED_GAMES = [
     name: "Impostor",
     tagline: "Trust no one. Suspect everyone.",
     description:
-      "Everyone sees the same secret word — except one person. The Impostor has to bluff their way through the conversation without getting caught. One wrong clue and it's game over.",
+      "Everyone sees the same secret word - except one person. The Impostor has to bluff their way through the conversation without getting caught. One wrong clue and it's game over.",
     players: "3 – 10 players",
     duration: "15 – 30 min",
     category: "Social Deduction",
@@ -145,10 +145,10 @@ const FEATURED_GAMES = [
     accent: "text-red-400",
     glow: "shadow-red-500/40",
     howToPlay: [
-      "Everyone gets the same word — except the Impostor",
+      "Everyone gets the same word - except the Impostor",
       "Go around the table giving one-word clues",
       "Discuss, debate, and vote on who's faking it",
-      "Impostor wins by staying hidden — the group wins by catching them",
+      "Impostor wins by staying hidden - the group wins by catching them",
     ],
   },
 ];
@@ -327,15 +327,14 @@ export default function PartyDeck() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
-            <span className="anim-fade-in-up d-200 block">One app.</span>
-            <span className="anim-fade-in-up d-300 block shimmer-text">
-              Endless game nights.
+            <span className="anim-fade-in-up d-200 block">Party Deck -</span>
+            <span className="anim-fade-in-up d-300 block text-orange-400">
+              14 games, one app.
             </span>
           </h1>
 
           <p className="anim-fade-in-up d-400 text-base sm:text-lg text-purple-200 font-semibold mt-4 max-w-xl mx-auto leading-relaxed">
-            10+ party games packed into a single app. Open it, pick a game, and
-            start playing — your crew does the rest.
+            Open it, pick a game, and start playing - your crew does the rest.
           </p>
 
           <div className="anim-fade-in-up d-500 flex flex-wrap gap-2 justify-center mt-4">
@@ -343,7 +342,7 @@ export default function PartyDeck() {
               <Users className="w-3 h-3" /> 2 – 10 Players
             </span>
             <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/15 rounded-full px-3 py-1 text-xs font-bold text-purple-200">
-              🎮 10+ Games
+              🎮 14 Games
             </span>
             <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/15 rounded-full px-3 py-1 text-xs font-bold text-purple-200">
               📱 iOS & Android
@@ -368,7 +367,7 @@ export default function PartyDeck() {
           </div>
           <div className="hidden sm:block w-px h-12 bg-white/20" />
           <div className="text-center">
-            <p className="text-3xl font-black text-white">10+</p>
+            <p className="text-3xl font-black text-white">14</p>
             <p className="text-sm text-purple-300 mt-1">Games & Growing</p>
           </div>
           <div className="hidden sm:block w-px h-12 bg-white/20" />
@@ -389,7 +388,7 @@ export default function PartyDeck() {
             Pick a game. Any game.
           </h2>
           <p className="text-purple-300 mt-3 max-w-lg mx-auto text-lg">
-            From icebreakers to all-night classics — every game is built for
+            From icebreakers to all-night classics - every game is built for
             laughs.
           </p>
         </div>
@@ -453,7 +452,7 @@ export default function PartyDeck() {
             Meet the games everyone loves
           </h2>
           <p className="text-purple-300 mt-3 max-w-xl mx-auto text-lg">
-            Two of our most-played games — and we're just getting started.
+            Two of our most-played games - and we're just getting started.
           </p>
         </div>
 

@@ -41,7 +41,7 @@ const FEATURED_GAMES = [
     name: "Alias",
     tagline: "The ultimate word-guessing race",
     description:
-      "Race against the clock! One player describes words without saying them — teammates guess as many as possible before time runs out. The fastest talkers win!",
+      "Race against the clock! One player describes words without saying them - teammates guess as many as possible before time runs out. The fastest talkers win!",
     players: "2 – 10 players",
     duration: "20 – 60 min",
     category: "Word Game",
@@ -56,7 +56,7 @@ const FEATURED_GAMES = [
     name: "Impostor",
     tagline: "One of you is lying. Find them.",
     description:
-      "Everyone gets the same secret word — except one Impostor who gets something different. They must bluff their way through discussion without being caught. Can you spot the liar?",
+      "Everyone gets the same secret word - except one Impostor who gets something different. They must bluff their way through discussion without being caught. Can you spot the liar?",
     players: "3 – 10 players",
     duration: "15 – 30 min",
     category: "Social Deduction",
@@ -395,7 +395,7 @@ export default function Home() {
             Pick your game. Start the fun.
           </h2>
           <p className="text-purple-300 mt-3 max-w-xl mx-auto">
-            From word-guessing races to social deduction — every game is built
+            From word-guessing races to social deduction - every game is built
             for unforgettable moments.
           </p>
         </div>
@@ -422,7 +422,7 @@ export default function Home() {
             "Absolute must-have for game nights. We fire it up every single
             time."
           </p>
-          <p className="text-purple-400 text-sm mt-3">— Mia 🎉</p>
+          <p className="text-purple-400 text-sm mt-3">- Mia 🎉</p>
           <div className="flex items-center justify-center gap-3 mt-6">
             <span className="text-3xl font-black text-white">🏆</span>
             <div className="text-left">
