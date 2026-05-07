@@ -11,11 +11,15 @@ import HaveYouEver from "./pages/HaveYouEver";
 import StrangeTruths from "./pages/StrangeTruths";
 import PartyDeck from "./pages/PartyDeck";
 import OtherApps from "./pages/OtherApps";
+import StoreRedirect from "./pages/StoreRedirect";
 import Layout from "./Layout";
 import ScrollToTop from "./components/ScrollToTop";
 import TagManager from "react-gtm-module";
 import { createPageUrl } from "./utils";
 import useUTMTracking from "./hooks/useUTMTracking";
+
+// Routes rendered without the marketing-site chrome (navbar/footer).
+const BARE_LAYOUT_PATHS = new Set(["/partyroom", "/unspoken"]);
 
 const tagManagerArgs = {
   gtmId: "GTM-WBJFJT34",
@@ -24,6 +28,11 @@ TagManager.initialize(tagManagerArgs);
 
 function LayoutWithLocation({ children }) {
   const location = useLocation();
+
+  if (BARE_LAYOUT_PATHS.has(location.pathname)) {
+    return children;
+  }
+
   let currentPageName = "PartyDeck";
 
   if (location.pathname === "/" || location.pathname === createPageUrl("PartyDeck")) {
@@ -57,6 +66,8 @@ export default function App() {
             <Route path="/strange-truths" element={<StrangeTruths />} />
             <Route path="/have-you-ever" element={<HaveYouEver />} />
             <Route path="/dice-roll" element={<DiceRoll />} />
+            <Route path="/partyroom" element={<StoreRedirect appKey="partyRoom" />} />
+            <Route path="/unspoken" element={<StoreRedirect appKey="unspoken" />} />
             <Route path="*" element={<PartyDeck />} />
           </Routes>
         </LayoutWithLocation>
