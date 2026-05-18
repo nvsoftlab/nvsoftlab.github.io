@@ -12,7 +12,7 @@ html,
 body {
   height: 100%;
   overflow-x: hidden; /* Prevent horizontal scroll on mobile */
-  background-color: #150933; /* Dark bg on overscroll - no white edges */
+  background-color: #0a0a0a; /* Dark bg on overscroll - no white edges */
 }
 
 body {
