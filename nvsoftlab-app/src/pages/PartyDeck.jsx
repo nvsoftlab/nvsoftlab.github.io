@@ -20,124 +20,159 @@ import funnyImg from "../assets/funny_answers.jpg";
 import waveLengthImg from "../assets/wavelength.jpg";
 import tabooImg from "../assets/taboo.jpg";
 import whosTheLiarImg from "../assets/whos_the_liar.jpg";
+import mafiaImg from "../assets/mafia.jpg";
+import scribbleImg from "../assets/scribble.jpg";
+import unspokenImg from "../assets/unspoken.jpg";
+import guessTheAgeImg from "../assets/guess_the_age.jpg";
+import guessTheNumberImg from "../assets/guess_the_number.jpg";
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 
 const GAMES = [
   {
+    name: "Impostor",
+    desc: "Trust no one. Suspect everyone.",
+    img: impostorImg,
+    gradient: "from-purple-500 to-violet-700",
+  },
+  {
+    name: "Who's the Liar",
+    desc: "Spot the lies hiding in plain sight",
+    img: whosTheLiarImg,
+    gradient: "from-slate-600 to-gray-800",
+  },
+  {
+    name: "Mafia",
+    desc: "The classic, in your pocket",
+    img: mafiaImg,
+    gradient: "from-gray-700 to-slate-900",
+  },
+  {
+    name: "Alias",
+    desc: "Describe fast. Guess faster.",
+    img: aliasImg,
+    gradient: "from-yellow-400 to-orange-500",
+  },
+  {
+    name: "Word Rush",
+    desc: "Quick-fire words. Say it, score it, next one.",
+    img: wldrshImg,
+    gradient: "from-sky-400 to-blue-600",
+  },
+  {
+    name: "Taboo",
+    desc: "The right word is on the card - so is everything you can't say",
+    img: tabooImg,
+    gradient: "from-red-700 to-pink-800",
+  },
+  {
+    name: "Charades",
+    desc: "Hold the phone to your forehead. Let the chaos begin.",
+    img: charadesImg,
+    gradient: "from-green-400 to-teal-600",
+  },
+  {
+    name: "Draw Stories",
+    desc: "Telephone, but with drawings",
+    img: drawImg,
+    gradient: "from-blue-400 to-indigo-600",
+  },
+  {
+    name: "Scribble",
+    desc: "Quick draws. Quick guesses. Quick laughs.",
+    img: scribbleImg,
+    gradient: "from-indigo-400 to-blue-700",
+  },
+  {
+    name: "Funny Answers",
+    desc: "Write the funniest answer. Let the table decide.",
+    img: funnyImg,
+    gradient: "from-yellow-500 to-amber-600",
+  },
+  {
+    name: "Wavelength",
+    desc: "Find the same wavelength as the table",
+    img: waveLengthImg,
+    gradient: "from-teal-500 to-cyan-600",
+  },
+  {
     name: "Never Have I Ever",
-    desc: "Reveal secrets & spark wild confessions",
+    desc: "The classic - for any group, any age, any vibe",
     img: nhieImg,
     gradient: "from-pink-500 to-rose-600",
   },
   {
     name: "Truth or Dare",
-    desc: "Answer honestly or accept the challenge",
+    desc: "Hundreds of fresh prompts, no awkward silences",
     img: todImg,
     gradient: "from-orange-500 to-red-600",
   },
   {
-    name: "Alias",
-    desc: "Race the clock - describe without saying",
-    img: aliasImg,
-    gradient: "from-yellow-400 to-orange-500",
-  },
-  {
-    name: "Impostor",
-    desc: "One liar, one word - can you find them?",
-    img: impostorImg,
-    gradient: "from-purple-500 to-violet-700",
-  },
-  {
-    name: "Draw Stories",
-    desc: "Sketch a story, watch it go off the rails",
-    img: drawImg,
-    gradient: "from-blue-400 to-indigo-600",
-  },
-  {
-    name: "Charades Up",
-    desc: "Act it out - no words allowed",
-    img: charadesImg,
-    gradient: "from-green-400 to-teal-600",
-  },
-  {
     name: "Would You Rather",
-    desc: "Pick a side - no easy answers here",
+    desc: "Two choices. No right answer. Hours of laughing about why.",
     img: wyrImg,
     gradient: "from-cyan-500 to-blue-600",
   },
   {
+    name: "Unspoken",
+    desc: "The questions that turn dinner into a real conversation",
+    img: unspokenImg,
+    gradient: "from-fuchsia-500 to-indigo-600",
+  },
+  {
     name: "Most Likely To",
-    desc: "Vote for who'd actually do it",
+    desc: "The funniest, most accurate person at the table - exposed",
     img: mltImg,
     gradient: "from-violet-500 to-purple-700",
   },
   {
-    name: "Funny Answers",
-    desc: "The silliest answer wins every time",
-    img: funnyImg,
-    gradient: "from-yellow-500 to-amber-600",
+    name: "Guess the Age",
+    desc: "How old does each person sound? Time to find out.",
+    img: guessTheAgeImg,
+    gradient: "from-amber-500 to-orange-700",
   },
   {
-    name: "Word Rush",
-    desc: "Spell fast, think faster - letters flying, time running out",
-    img: wldrshImg,
-    gradient: "from-sky-400 to-blue-600",
+    name: "Guess the Number",
+    desc: "One secret number. A lot of bad guesses.",
+    img: guessTheNumberImg,
+    gradient: "from-emerald-500 to-teal-700",
   },
   {
     name: "Bomb",
-    desc: "Pass it quick - the bomb explodes when time runs out",
+    desc: "The timer is ticking. The phone is in your hand. Pass it. Fast.",
     img: bombImg,
     gradient: "from-red-600 to-rose-800",
-  },
-  {
-    name: "Wavelength",
-    desc: "Get on the same frequency as your team",
-    img: waveLengthImg,
-    gradient: "from-teal-500 to-cyan-600",
-  },
-  {
-    name: "Taboo Words",
-    desc: "Describe it without saying the obvious",
-    img: tabooImg,
-    gradient: "from-red-700 to-pink-800",
-  },
-  {
-    name: "Who's the Liar",
-    desc: "Spot the fake before the group falls apart",
-    img: whosTheLiarImg,
-    gradient: "from-slate-600 to-gray-800",
   },
 ];
 
 const FEATURED_GAMES = [
   {
-    name: "Alias",
-    tagline: "The ultimate word-guessing showdown",
+    name: "Mafia",
+    tagline: "A classic, in your pocket.",
     description:
-      "One player describes, the rest guess - but the clock is ticking. The faster you talk, the more you score. Teams go head-to-head in a battle of quick thinking and even quicker tongues.",
-    players: "2 – 10 players",
-    duration: "20 – 60 min",
-    category: "Word Game",
-    categoryColor: "bg-orange-500/20 text-orange-300 border-orange-500/30",
-    gradient: "from-yellow-400 to-orange-500",
-    img: aliasImg,
-    accent: "text-orange-400",
-    glow: "shadow-orange-500/40",
+      "The full Mafia experience - roles, night phases, day votes - guided by the app. One player is the Game Master and runs the table; everyone else gets a secret role and tries to survive until dawn.",
+    players: "5 – 20 players",
+    duration: "30 – 60 min",
+    category: "Social Deduction",
+    categoryColor: "bg-slate-500/20 text-slate-200 border-slate-500/30",
+    gradient: "from-gray-700 to-slate-900",
+    img: mafiaImg,
+    accent: "text-slate-300",
+    glow: "shadow-slate-500/40",
     howToPlay: [
-      "Split into two or more teams",
-      "One player describes words - no saying the word itself",
-      "Teammates guess as many as they can before time runs out",
-      "Switch turns and see who scores the most",
+      "One player acts as Game Master and hands the phone around to deal secret roles.",
+      "At night, the app wakes each role in turn - Mafia, Detective, Doctor, and more - to make their move.",
+      "By day, the village debates who looks suspicious and votes someone out.",
+      "Play continues night-by-day until either the Mafia is wiped out or they outnumber the village.",
     ],
   },
   {
     name: "Impostor",
     tagline: "Trust no one. Suspect everyone.",
     description:
-      "Everyone sees the same secret word - except one person. The Impostor has to bluff their way through the conversation without getting caught. One wrong clue and it's game over.",
-    players: "3 – 10 players",
-    duration: "15 – 30 min",
+      "Everyone at the table sees the same secret word - except one person. The Impostor has to bluff their way through the round without giving themselves away. One careful clue can save you; one wrong word and the table turns.",
+    players: "3 – 12 players",
+    duration: "20 – 45 min",
     category: "Social Deduction",
     categoryColor: "bg-red-500/20 text-red-300 border-red-500/30",
     gradient: "from-red-700 to-rose-600",
@@ -145,10 +180,50 @@ const FEATURED_GAMES = [
     accent: "text-red-400",
     glow: "shadow-red-500/40",
     howToPlay: [
-      "Everyone gets the same word - except the Impostor",
-      "Go around the table giving one-word clues",
-      "Discuss, debate, and vote on who's faking it",
-      "Impostor wins by staying hidden - the group wins by catching them",
+      "Each player privately checks their card. Almost everyone sees the secret word; one or two see only a hint.",
+      "Go around the circle, each person saying a single word that hints at the secret.",
+      "Discuss who sounded off, then vote on who you think is the Impostor.",
+      "Reveal the roles. If the group catches the Impostor, the group wins. If they bluff their way through, they win.",
+    ],
+  },
+  {
+    name: "Guess the Age",
+    tagline: "How old does each person sound? Time to find out.",
+    description:
+      "Each player is secretly assigned a random age. Through casual questions and conversation, the table tries to guess everyone else's secret age - without giving away their own. Equal parts deduction, performance, and accidental impressions of your grandparents.",
+    players: "2 – 12 players",
+    duration: "15 – 30 min",
+    category: "Deduction Game",
+    categoryColor: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+    gradient: "from-amber-500 to-orange-700",
+    img: guessTheAgeImg,
+    accent: "text-amber-400",
+    glow: "shadow-amber-500/40",
+    howToPlay: [
+      "Each player secretly receives a random age.",
+      "Take turns asking each other questions. Answer in character - without revealing your number.",
+      "After the conversation, each player guesses everyone else's age.",
+      "Exact guesses score big as Detective. Players who fooled the table score as Actors.",
+    ],
+  },
+  {
+    name: "Alias",
+    tagline: "Describe fast. Guess faster.",
+    description:
+      "Two teams race to guess as many words as possible before the timer runs out. The describer can say almost anything - except the word itself. Pure laughter when someone fumbles for a synonym and the team yells out wild guesses.",
+    players: "2 – 8 teams",
+    duration: "20 – 40 min",
+    category: "Team Word Game",
+    categoryColor: "bg-orange-500/20 text-orange-300 border-orange-500/30",
+    gradient: "from-yellow-400 to-orange-500",
+    img: aliasImg,
+    accent: "text-orange-400",
+    glow: "shadow-orange-500/40",
+    howToPlay: [
+      "Split into two or more teams. Pick a round length and a target score.",
+      "One describer per team has 60 seconds to make their teammates guess as many words as possible.",
+      "No saying the word, no translations, no pointing. Skip a word any time - but it costs you a point.",
+      "Teams swap. First team to hit the target score wins.",
     ],
   },
 ];
@@ -161,7 +236,7 @@ function StoreCards() {
       <Button
         asChild
         size="lg"
-        className="bg-gradient-to-r from-orange-500 to-purple-600 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3 opacity-70 cursor-not-allowed"
+        className="bg-gradient-to-r from-amber-400 via-pink-500 to-fuchsia-600 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3 opacity-70 cursor-not-allowed shadow-lg shadow-pink-500/30"
         disabled
       >
         <a
@@ -177,7 +252,7 @@ function StoreCards() {
             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
           </svg>
           <div className="text-left">
-            <div className="text-xs text-orange-100">Coming Soon</div>
+            <div className="text-xs text-amber-100">Coming Soon</div>
             <div className="text-sm sm:text-base font-semibold">App Store</div>
           </div>
         </a>
@@ -186,7 +261,7 @@ function StoreCards() {
       <Button
         asChild
         size="lg"
-        className="bg-gradient-to-r from-purple-600 to-orange-500 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3 opacity-70 cursor-not-allowed"
+        className="bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-pink-500 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3 opacity-70 cursor-not-allowed shadow-lg shadow-fuchsia-500/30"
         disabled
       >
         <a
@@ -202,7 +277,7 @@ function StoreCards() {
             <path d="M3.609 1.814L13.792 12 3.609 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L13.5 12l4.199-2.491zM5.864 2.658L16.802 8.99l-8.635 8.635-2.303-2.302 8.635-8.635z" />
           </svg>
           <div className="text-left">
-            <div className="text-xs text-purple-100">Coming Soon</div>
+            <div className="text-xs text-pink-100">Coming Soon</div>
             <div className="text-sm sm:text-base font-semibold">
               Google Play
             </div>
@@ -302,11 +377,13 @@ export default function PartyDeck() {
         className="relative overflow-hidden text-center px-4 py-10 sm:py-14"
         style={{
           background:
-            "radial-gradient(ellipse at top, #2d1060 0%, #0f0a1e 70%)",
+            "radial-gradient(ellipse at top, #4a1080 0%, #2a0f5c 45%, #150933 100%)",
         }}
       >
-        <div className="absolute top-0 left-1/4 w-72 h-72 bg-orange-500/8 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute top-0 right-1/4 w-72 h-72 bg-purple-500/8 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-10 left-[10%] w-72 h-72 bg-fuchsia-500/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-20 right-[8%] w-80 h-80 bg-amber-400/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-1/3 w-60 h-60 bg-pink-500/15 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-4xl mx-auto">
           <div className="anim-fade-in-down d-0 inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-3 py-1.5 text-xs font-bold text-purple-200 mb-5">
@@ -317,7 +394,7 @@ export default function PartyDeck() {
           <div className="anim-scale-in d-200 mb-6">
             <img
               src={splashImg}
-              alt="Party Deck"
+              alt="Party Room"
               className="w-full max-w-xs sm:max-w-sm mx-auto anim-float drop-shadow-2xl rounded-3xl"
             />
           </div>
@@ -327,22 +404,27 @@ export default function PartyDeck() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
-            <span className="anim-fade-in-up d-200 block">Party Deck -</span>
-            <span className="anim-fade-in-up d-300 block text-orange-400">
-              14 games, one app.
+            <span className="anim-fade-in-up d-200 block">Party Room -</span>
+            <span className="anim-fade-in-up d-300 block bg-gradient-to-r from-amber-300 via-pink-400 to-fuchsia-500 bg-clip-text text-transparent">
+              19+ party games. Zero planning.
             </span>
           </h1>
 
           <p className="anim-fade-in-up d-400 text-base sm:text-lg text-purple-200 font-semibold mt-4 max-w-xl mx-auto leading-relaxed">
-            Open it, pick a game, and start playing - your crew does the rest.
+            One app for every kind of get-together - game nights, road trips,
+            dinner parties, long weekends with family. Pick a game, grab your
+            people, and you're in.
           </p>
 
           <div className="anim-fade-in-up d-500 flex flex-wrap gap-2 justify-center mt-4">
             <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/15 rounded-full px-3 py-1 text-xs font-bold text-purple-200">
-              <Users className="w-3 h-3" /> 2 – 10 Players
+              <Users className="w-3 h-3" /> 1 – 20 Players
             </span>
             <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/15 rounded-full px-3 py-1 text-xs font-bold text-purple-200">
-              🎮 14 Games
+              🎮 19+ Games
+            </span>
+            <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/15 rounded-full px-3 py-1 text-xs font-bold text-purple-200">
+              🌍 6+ Languages
             </span>
             <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/15 rounded-full px-3 py-1 text-xs font-bold text-purple-200">
               📱 iOS & Android
@@ -351,7 +433,7 @@ export default function PartyDeck() {
 
           <Link
             to={createPageUrl("OtherApps")}
-            className="anim-fade-in d-700 inline-block text-purple-400 hover:text-orange-300 font-semibold text-sm mt-5 transition"
+            className="anim-fade-in d-700 inline-block text-purple-300 hover:text-amber-300 font-semibold text-sm mt-5 transition"
           >
             Explore our other apps →
           </Link>
@@ -359,7 +441,7 @@ export default function PartyDeck() {
       </section>
 
       {/* ── Stats bar ── */}
-      <div className="bg-[#1a0f3a]/80 border-y border-white/10 py-8">
+      <div className="bg-[#231055]/80 border-y border-white/10 py-8">
         <div className="max-w-3xl mx-auto px-4 flex flex-wrap items-center justify-center gap-8 sm:gap-16">
           <div className="text-center">
             <p className="text-3xl font-black text-yellow-400">★★★★★</p>
@@ -367,21 +449,42 @@ export default function PartyDeck() {
           </div>
           <div className="hidden sm:block w-px h-12 bg-white/20" />
           <div className="text-center">
-            <p className="text-3xl font-black text-white">14</p>
+            <p className="text-3xl font-black bg-gradient-to-r from-amber-300 to-pink-400 bg-clip-text text-transparent">19+</p>
             <p className="text-sm text-purple-300 mt-1">Games & Growing</p>
           </div>
           <div className="hidden sm:block w-px h-12 bg-white/20" />
           <div className="text-center">
-            <p className="text-3xl font-black text-white">2–10</p>
+            <p className="text-3xl font-black bg-gradient-to-r from-cyan-300 to-fuchsia-400 bg-clip-text text-transparent">1–20</p>
             <p className="text-sm text-purple-300 mt-1">Players per Game</p>
           </div>
         </div>
       </div>
 
+      {/* ── Featured Game Spotlights ── */}
+      <section className="max-w-5xl mx-auto px-4 py-16">
+        <div className="text-center mb-16 reveal">
+          <span className="inline-block bg-pink-500/20 border border-pink-500/30 text-pink-300 rounded-full px-4 py-1.5 text-xs font-bold mb-4 tracking-widest uppercase">
+            Fan Favourites
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-black text-white">
+            Meet the games everyone loves
+          </h2>
+          <p className="text-purple-300 mt-3 max-w-xl mx-auto text-lg">
+            A few of our most-played games - and we're just getting started.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-24">
+          {FEATURED_GAMES.map((game, i) => (
+            <GameSpotlight key={game.name} game={game} reversed={i % 2 !== 0} />
+          ))}
+        </div>
+      </section>
+
       {/* ── All Games ── */}
       <section id="games" className="max-w-5xl mx-auto px-4 py-16">
         <div className="text-center mb-12 reveal">
-          <span className="inline-block bg-purple-500/20 border border-purple-500/30 text-purple-300 rounded-full px-4 py-1.5 text-xs font-bold mb-4 tracking-widest uppercase">
+          <span className="inline-block bg-amber-400/20 border border-amber-400/30 text-amber-300 rounded-full px-4 py-1.5 text-xs font-bold mb-4 tracking-widest uppercase">
             Game Library
           </span>
           <h2 className="text-3xl sm:text-4xl font-black text-white">
@@ -397,7 +500,7 @@ export default function PartyDeck() {
           {GAMES.map((game, i) => (
             <div
               key={game.name}
-              className="flex items-stretch bg-[#1a0f3a]/70 border border-white/10 rounded-2xl overflow-hidden card-hover reveal-pop group"
+              className="flex items-stretch bg-[#231055]/70 border border-white/10 rounded-2xl overflow-hidden card-hover reveal-pop group"
               style={{ transitionDelay: `${i * 0.06}s` }}
             >
               {/* Photo or gradient fallback */}
@@ -442,36 +545,17 @@ export default function PartyDeck() {
         </div>
       </section>
 
-      {/* ── Featured Game Spotlights ── */}
-      <section className="max-w-5xl mx-auto px-4 py-16">
-        <div className="text-center mb-16 reveal">
-          <span className="inline-block bg-orange-500/20 border border-orange-500/30 text-orange-300 rounded-full px-4 py-1.5 text-xs font-bold mb-4 tracking-widest uppercase">
-            Fan Favourites
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-white">
-            Meet the games everyone loves
-          </h2>
-          <p className="text-purple-300 mt-3 max-w-xl mx-auto text-lg">
-            Two of our most-played games - and we're just getting started.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-24">
-          {FEATURED_GAMES.map((game, i) => (
-            <GameSpotlight key={game.name} game={game} reversed={i % 2 !== 0} />
-          ))}
-        </div>
-      </section>
-
       {/* ── Download CTA ── */}
       <section className="max-w-4xl mx-auto px-4 pb-16 reveal-scale">
-        <div className="bg-gradient-to-br from-[#2d1060] to-[#1a0f3a] border border-white/10 rounded-3xl p-8 sm:p-16 text-center">
+        <div className="relative overflow-hidden bg-gradient-to-br from-fuchsia-600/30 via-[#2d1060] to-amber-500/20 border border-white/15 rounded-3xl p-8 sm:p-16 text-center">
+          <div className="absolute -top-10 -left-10 w-60 h-60 bg-cyan-400/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-pink-500/25 rounded-full blur-3xl pointer-events-none" />
           <h2 className="text-3xl sm:text-5xl font-black text-white leading-tight">
             Ready to play?
           </h2>
           <p className="text-purple-200 mt-4 text-lg max-w-lg mx-auto leading-relaxed">
-            Grab your phone, gather your crew, and let Party Deck handle the
-            rest.
+            Open the app, pick a game, and the table is alive again. No
+            accounts, no logins, no rulebooks.
           </p>
           <div className="mt-8">
             <StoreCards />

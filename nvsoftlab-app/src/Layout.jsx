@@ -7,9 +7,9 @@ import nvSoftLabIcon from "/favicon.png";
 const NAV_LINKS = [
   {
     key: "PartyDeck",
-    label: "Party Deck",
+    label: "Party Room",
     Icon: Gamepad2,
-    activeColor: "text-orange-300 bg-gradient-to-r from-orange-500/20 to-purple-500/20",
+    activeColor: "text-pink-300 bg-gradient-to-r from-amber-400/20 to-pink-500/20",
   },
   {
     key: "OtherApps",
@@ -27,17 +27,18 @@ export default function Layout({ children, currentPageName }) {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <div className="min-h-screen bg-[#0f0a1e] font-nunito">
+    <div className="min-h-screen bg-[#150933] font-nunito">
 
       {/* ── Navbar ── */}
-      <nav className="bg-[#0f0a1e]/90 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
+      <nav className="relative bg-gradient-to-r from-fuchsia-600/30 via-[#150933]/95 to-amber-500/20 backdrop-blur-md sticky top-0 z-50 shadow-lg shadow-fuchsia-900/20">
+        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-pink-400/60 to-transparent" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
 
             {/* Logo */}
             <Link
               to={createPageUrl("PartyDeck")}
-              className="flex items-center gap-2 sm:gap-3 group transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#0f0a1e] rounded-lg"
+              className="flex items-center gap-2 sm:gap-3 group transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#150933] rounded-lg"
               onClick={closeMobileMenu}
             >
               <img
@@ -46,7 +47,7 @@ export default function Layout({ children, currentPageName }) {
                 className="w-10 h-10 sm:w-12 sm:h-12 object-contain group-hover:scale-105 transition-transform duration-300"
               />
               <div className="flex flex-col justify-center">
-                <h1 className="text-lg sm:text-xl font-black bg-gradient-to-r from-orange-400 to-purple-400 bg-clip-text text-transparent leading-none">
+                <h1 className="text-lg sm:text-xl font-black bg-gradient-to-r from-amber-400 to-pink-400 bg-clip-text text-transparent leading-none">
                   NVSoftLab
                 </h1>
                 <p className="text-xs text-purple-400 mt-0.5 hidden sm:block leading-none">Mobile App Studio</p>
@@ -62,7 +63,7 @@ export default function Layout({ children, currentPageName }) {
                   <Link
                     key={link.key}
                     to={createPageUrl(link.key)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 text-sm font-bold focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#0f0a1e] ${
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 text-sm font-bold focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#150933] ${
                       isActive ? link.activeColor : "text-purple-300 hover:text-white hover:bg-white/5"
                     }`}
                   >
@@ -76,7 +77,7 @@ export default function Layout({ children, currentPageName }) {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen((v) => !v)}
-              className="md:hidden flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#0f0a1e] transition-colors duration-200"
+              className="md:hidden flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-[#150933] transition-colors duration-200"
               aria-label="Toggle mobile menu"
               aria-expanded={isMobileMenuOpen}
             >
@@ -117,7 +118,7 @@ export default function Layout({ children, currentPageName }) {
       <main className="flex-1">{children}</main>
 
       {/* ── Footer ── */}
-      <footer className="bg-[#0f0a1e] border-t border-white/10 mt-16 sm:mt-20">
+      <footer className="bg-[#150933] border-t border-white/10 mt-16 sm:mt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
 
           {/* Social links */}
