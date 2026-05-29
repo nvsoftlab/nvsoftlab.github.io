@@ -1,3 +1,6 @@
+import partyRoomIcon from "../assets/partyroom.png";
+import unspokenIcon from "../assets/unspoken.jpg";
+
 // Single source of truth for app store metadata.
 // TEMPORARY: until each app has its own listing, both routes point at the
 // NVSoftLab developer pages on the App Store and Google Play. Swap in the
@@ -15,10 +18,11 @@ export const APPS = {
     description:
       "Pass one phone around the group and play classic party games together - no extra devices, no setup. Just open it, pick a game, and let your crew do the rest.",
     accent: "from-orange-500 to-purple-600",
-    iosAppId: "",
-    appStoreUrl: DEV_APP_STORE_URL,
-    androidPackage: "com.nvsoftlab.partyroom",
-    playStoreUrl: DEV_PLAY_STORE_URL,
+    icon: partyRoomIcon,
+    iosAppId: "6759220839",
+    appStoreUrl: "https://apps.apple.com/us/app/party-room-imposter-alias/id6759220839",
+    androidPackage: "com.nvsoftlab.partydesk",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.nvsoftlab.partydesk",
     available: true,
   },
   unspoken: {
@@ -28,6 +32,7 @@ export const APPS = {
     description:
       "Unspoken serves up the spicy, vulnerable, and unexpectedly hilarious prompts that get a group talking - no awkward silences, no boring rounds.",
     accent: "from-fuchsia-500 to-indigo-600",
+    icon: unspokenIcon,
     iosAppId: "",
     appStoreUrl: DEV_APP_STORE_URL,
     androidPackage: "com.nvsoftlab.unspoken",

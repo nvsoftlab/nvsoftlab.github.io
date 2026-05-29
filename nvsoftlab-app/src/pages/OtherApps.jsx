@@ -78,12 +78,7 @@ export default function OtherApps() {
   useScrollReveal();
 
   return (
-    <div
-      className="min-h-screen"
-      style={{
-        background: "radial-gradient(ellipse at top, #1a0f3a 0%, #0f0a1e 60%)",
-      }}
-    >
+    <div className="min-h-screen bg-[#0a0a0a]">
       <div className="max-w-4xl mx-auto px-4 py-12 sm:py-16">
         {/* Header */}
         <div className="text-center mb-14 anim-fade-in-up">
@@ -161,7 +156,7 @@ export default function OtherApps() {
             <Link
               key={app.name}
               to={createPageUrl(app.route)}
-              className={`group flex gap-5 sm:gap-6 bg-[#1a0f3a]/70 backdrop-blur-sm border ${app.border} rounded-2xl p-4 sm:p-5 shadow-lg ${app.glow} hover:shadow-xl transition-all duration-300 reveal-pop`}
+              className={`group flex gap-5 sm:gap-6 bg-white/5 backdrop-blur-sm border ${app.border} rounded-2xl p-4 sm:p-5 shadow-lg ${app.glow} hover:shadow-xl transition-all duration-300 reveal-pop`}
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
               {/* Square icon */}

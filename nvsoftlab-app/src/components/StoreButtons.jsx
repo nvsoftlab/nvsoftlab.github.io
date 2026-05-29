@@ -1,4 +1,4 @@
-import { Apple, Play } from "lucide-react";
+import { AppleIcon, GooglePlayIcon } from "./StoreIcons";
 
 export function AppStoreButton({ href, onClick, label = "App Store", subLabel = "Download on the" }) {
   return (
@@ -9,7 +9,7 @@ export function AppStoreButton({ href, onClick, label = "App Store", subLabel = 
       onClick={onClick}
       className="inline-flex items-center gap-3 bg-black hover:bg-neutral-800 text-white rounded-xl px-5 py-3 transition-colors border border-white/10"
     >
-      <Apple className="w-7 h-7" strokeWidth={1.5} />
+      <AppleIcon className="w-7 h-7" />
       <div className="text-left leading-tight">
         <div className="text-[10px] uppercase tracking-wide text-white/70">{subLabel}</div>
         <div className="text-base font-semibold">{label}</div>
@@ -27,7 +27,7 @@ export function PlayStoreButton({ href, onClick, label = "Google Play", subLabel
       onClick={onClick}
       className="inline-flex items-center gap-3 bg-black hover:bg-neutral-800 text-white rounded-xl px-5 py-3 transition-colors border border-white/10"
     >
-      <Play className="w-6 h-6 fill-white" strokeWidth={1.5} />
+      <GooglePlayIcon className="w-6 h-6" />
       <div className="text-left leading-tight">
         <div className="text-[10px] uppercase tracking-wide text-white/70">{subLabel}</div>
         <div className="text-base font-semibold">{label}</div>

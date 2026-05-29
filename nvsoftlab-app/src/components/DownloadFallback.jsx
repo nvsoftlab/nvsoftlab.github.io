@@ -22,6 +22,15 @@ export default function DownloadFallback({ app, search = "" }) {
     >
       <div className="max-w-3xl mx-auto w-full">
         <div className="text-center mb-10">
+          {app.icon && (
+            <div className="flex justify-center mb-5">
+              <img
+                src={app.icon}
+                alt={app.name}
+                className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl shadow-2xl object-cover"
+              />
+            </div>
+          )}
           <div
             className={`inline-block bg-gradient-to-r ${app.accent} bg-clip-text text-transparent`}
           >

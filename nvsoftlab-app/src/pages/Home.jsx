@@ -7,7 +7,7 @@ import useScrollReveal from "../hooks/useScrollReveal";
 import heroImg from "../assets/welcome-screen.png";
 import aliasImg from "../assets/game_alias.jpg";
 
-import impostorImg from "../assets/impostor.png";
+import impostorImg from "../assets/impostor.jpg";
 
 const HERO_IMG = heroImg;
 const ALIAS_IMG = aliasImg;
@@ -42,8 +42,8 @@ const FEATURED_GAMES = [
     tagline: "The ultimate word-guessing race",
     description:
       "Race against the clock! One player describes words without saying them - teammates guess as many as possible before time runs out. The fastest talkers win!",
-    players: "2 – 10 players",
-    duration: "20 – 60 min",
+    players: "2 - 10 players",
+    duration: "20 - 60 min",
     category: "Word Game",
     categoryColor: "bg-orange-500/20 text-orange-300 border-orange-500/30",
     gradient: "from-yellow-400 to-orange-500",
@@ -57,8 +57,8 @@ const FEATURED_GAMES = [
     tagline: "One of you is lying. Find them.",
     description:
       "Everyone gets the same secret word - except one Impostor who gets something different. They must bluff their way through discussion without being caught. Can you spot the liar?",
-    players: "3 – 10 players",
-    duration: "15 – 30 min",
+    players: "3 - 10 players",
+    duration: "15 - 30 min",
     category: "Social Deduction",
     categoryColor: "bg-red-500/20 text-red-300 border-red-500/30",
     gradient: "from-red-700 to-rose-600",
@@ -249,7 +249,7 @@ export default function Home() {
               {/* App info pills */}
               <div className="anim-fade-in-up d-600 flex flex-wrap gap-3 justify-center lg:justify-start mt-5">
                 <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/15 rounded-full px-3 py-1.5 text-xs font-bold text-purple-200">
-                  <Users className="w-3.5 h-3.5" /> 2 – 10 Players
+                  <Users className="w-3.5 h-3.5" /> 2 - 10 Players
                 </span>
                 <span className="inline-flex items-center gap-1.5 bg-white/10 border border-white/15 rounded-full px-3 py-1.5 text-xs font-bold text-purple-200">
                   🎮 10+ Games
@@ -337,7 +337,7 @@ export default function Home() {
           </div>
           <div className="hidden sm:block w-px h-10 bg-white/20" />
           <div className="text-center">
-            <p className="text-2xl sm:text-3xl font-black text-white">2–10</p>
+            <p className="text-2xl sm:text-3xl font-black text-white">2-10</p>
             <p className="text-xs text-purple-300 mt-0.5">Players per Game</p>
           </div>
         </div>

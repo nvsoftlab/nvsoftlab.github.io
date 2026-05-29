@@ -3,6 +3,8 @@ import { createPageUrl } from "../utils";
 import { Users, Clock, Sparkles } from "lucide-react";
 import { Button } from "../components/ui/Button";
 import useScrollReveal from "../hooks/useScrollReveal";
+import { getApp } from "../config/apps";
+import { getAppStoreLink, getPlayStoreLink } from "../utils/storeUrl";
 
 // ── Image assets ─────────────────────────────────────────────────────────────
 import splashImg from "../assets/pro-screen.png";
@@ -25,6 +27,7 @@ import scribbleImg from "../assets/scribble.jpg";
 import unspokenImg from "../assets/unspoken.jpg";
 import guessTheAgeImg from "../assets/guess_the_age.jpg";
 import guessTheNumberImg from "../assets/guess_the_number.jpg";
+import whoAmIImg from "../assets/who_am_i.jpg";
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 
@@ -143,6 +146,12 @@ const GAMES = [
     img: bombImg,
     gradient: "from-red-600 to-rose-800",
   },
+  {
+    name: "Who Am I?",
+    desc: "Ask yes/no questions. Figure out who - or what - you are.",
+    img: whoAmIImg,
+    gradient: "from-violet-500 to-fuchsia-700",
+  },
 ];
 
 const FEATURED_GAMES = [
@@ -151,8 +160,8 @@ const FEATURED_GAMES = [
     tagline: "A classic, in your pocket.",
     description:
       "The full Mafia experience - roles, night phases, day votes - guided by the app. One player is the Game Master and runs the table; everyone else gets a secret role and tries to survive until dawn.",
-    players: "5 – 20 players",
-    duration: "30 – 60 min",
+    players: "5 - 20 players",
+    duration: "30 - 60 min",
     category: "Social Deduction",
     categoryColor: "bg-slate-500/20 text-slate-200 border-slate-500/30",
     gradient: "from-gray-700 to-slate-900",
@@ -171,8 +180,8 @@ const FEATURED_GAMES = [
     tagline: "Trust no one. Suspect everyone.",
     description:
       "Everyone at the table sees the same secret word - except one person. The Impostor has to bluff their way through the round without giving themselves away. One careful clue can save you; one wrong word and the table turns.",
-    players: "3 – 12 players",
-    duration: "20 – 45 min",
+    players: "3 - 12 players",
+    duration: "20 - 45 min",
     category: "Social Deduction",
     categoryColor: "bg-red-500/20 text-red-300 border-red-500/30",
     gradient: "from-red-700 to-rose-600",
@@ -191,8 +200,8 @@ const FEATURED_GAMES = [
     tagline: "How old does each person sound? Time to find out.",
     description:
       "Each player is secretly assigned a random age. Through casual questions and conversation, the table tries to guess everyone else's secret age - without giving away their own. Equal parts deduction, performance, and accidental impressions of your grandparents.",
-    players: "2 – 12 players",
-    duration: "15 – 30 min",
+    players: "2 - 12 players",
+    duration: "15 - 30 min",
     category: "Deduction Game",
     categoryColor: "bg-amber-500/20 text-amber-300 border-amber-500/30",
     gradient: "from-amber-500 to-orange-700",
@@ -207,12 +216,32 @@ const FEATURED_GAMES = [
     ],
   },
   {
+    name: "Who Am I?",
+    tagline: "Each player gets a secret word - yours is hidden from you.",
+    description:
+      "Each player is secretly assigned a word. You can see everyone else's word, but not your own. Ask yes/no questions, piece together the clues, and figure out who - or what - you are before anyone else does.",
+    players: "2 - 8 players",
+    duration: "15 - 40 min",
+    category: "Guessing Game",
+    categoryColor: "bg-violet-500/20 text-violet-300 border-violet-500/30",
+    gradient: "from-violet-500 to-fuchsia-700",
+    img: whoAmIImg,
+    accent: "text-violet-400",
+    glow: "shadow-violet-500/40",
+    howToPlay: [
+      "Each player is secretly assigned a word. You can see everyone else's word, but not your own.",
+      "Take turns asking yes/no questions to the group to narrow down your identity.",
+      "When you think you know your word, press the button. Guess right and you win - guess wrong and you're out.",
+      "The game continues until someone guesses correctly or only one player remains.",
+    ],
+  },
+  {
     name: "Alias",
     tagline: "Describe fast. Guess faster.",
     description:
       "Two teams race to guess as many words as possible before the timer runs out. The describer can say almost anything - except the word itself. Pure laughter when someone fumbles for a synonym and the team yells out wild guesses.",
-    players: "2 – 8 teams",
-    duration: "20 – 40 min",
+    players: "2 - 8 teams",
+    duration: "20 - 40 min",
     category: "Team Word Game",
     categoryColor: "bg-orange-500/20 text-orange-300 border-orange-500/30",
     gradient: "from-yellow-400 to-orange-500",
@@ -231,18 +260,22 @@ const FEATURED_GAMES = [
 // ── Sub-components ────────────────────────────────────────────────────────────
 
 function StoreCards() {
+  const app = getApp("partyRoom");
+  const iosUrl = getAppStoreLink(app, "");
+  const androidUrl = getPlayStoreLink(app, "");
+
   return (
     <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 flex-wrap">
       <Button
         asChild
         size="lg"
-        className="bg-[#FF3D6E] hover:bg-[#FF1F55] text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3 opacity-70 cursor-not-allowed"
-        disabled
+        className="bg-[#FF3D6E] hover:bg-[#FF1F55] text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3"
       >
         <a
-          href="#"
-          onClick={(e) => e.preventDefault()}
-          className="flex items-center gap-3 justify-center pointer-events-none"
+          href={iosUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 justify-center"
         >
           <svg
             className="w-5 h-5 sm:w-6 sm:h-6"
@@ -252,7 +285,7 @@ function StoreCards() {
             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
           </svg>
           <div className="text-left">
-            <div className="text-xs text-white/70">Coming Soon</div>
+            <div className="text-xs text-white/70">Download on the</div>
             <div className="text-sm sm:text-base font-semibold">App Store</div>
           </div>
         </a>
@@ -261,13 +294,13 @@ function StoreCards() {
       <Button
         asChild
         size="lg"
-        className="bg-[#1B7DF2] hover:bg-[#0B6CE0] text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3 opacity-70 cursor-not-allowed"
-        disabled
+        className="bg-[#1B7DF2] hover:bg-[#0B6CE0] text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-lg flex items-center gap-3"
       >
         <a
-          href="#"
-          onClick={(e) => e.preventDefault()}
-          className="flex items-center gap-3 justify-center pointer-events-none"
+          href={androidUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 justify-center"
         >
           <svg
             className="w-5 h-5 sm:w-6 sm:h-6"
@@ -277,7 +310,7 @@ function StoreCards() {
             <path d="M3.609 1.814L13.792 12 3.609 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L13.5 12l4.199-2.491zM5.864 2.658L16.802 8.99l-8.635 8.635-2.303-2.302 8.635-8.635z" />
           </svg>
           <div className="text-left">
-            <div className="text-xs text-white/70">Coming Soon</div>
+            <div className="text-xs text-white/70">Get it on</div>
             <div className="text-sm sm:text-base font-semibold">
               Google Play
             </div>
@@ -399,7 +432,7 @@ export default function PartyDeck() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
             <span className="anim-fade-in-up d-200 block">Party Room -</span>
             <span className="anim-fade-in-up d-300 block text-[#FF3D6E]">
-              19+ party games. Zero planning.
+              20+ party games. Zero planning.
             </span>
           </h1>
 
@@ -411,10 +444,10 @@ export default function PartyDeck() {
 
           <div className="anim-fade-in-up d-500 flex flex-wrap gap-2 justify-center mt-4">
             <span className="inline-flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-1 text-xs font-bold text-white/80">
-              <Users className="w-3 h-3" /> 1 – 20 Players
+              <Users className="w-3 h-3" /> 1 - 20 Players
             </span>
             <span className="inline-flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-1 text-xs font-bold text-white/80">
-              🎮 19+ Games
+              🎮 20+ Games
             </span>
             <span className="inline-flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-1 text-xs font-bold text-white/80">
               🌍 6+ Languages
@@ -442,12 +475,12 @@ export default function PartyDeck() {
           </div>
           <div className="hidden sm:block w-px h-12 bg-white/20" />
           <div className="text-center">
-            <p className="text-3xl font-black text-[#FFE600]">19+</p>
+            <p className="text-3xl font-black text-[#FFE600]">20+</p>
             <p className="text-sm text-[#a0a0a8] mt-1">Games & Growing</p>
           </div>
           <div className="hidden sm:block w-px h-12 bg-white/20" />
           <div className="text-center">
-            <p className="text-3xl font-black text-[#FF3D6E]">1–20</p>
+            <p className="text-3xl font-black text-[#FF3D6E]">1-20</p>
             <p className="text-sm text-[#a0a0a8] mt-1">Players per Game</p>
           </div>
         </div>
