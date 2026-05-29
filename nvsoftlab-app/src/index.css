@@ -12,7 +12,8 @@ html,
 body {
   height: 100%;
   overflow-x: hidden; /* Prevent horizontal scroll on mobile */
-  background-color: #0a0a0a; /* Dark bg on overscroll - no white edges */
+  background-color: #0d0b12; /* Overscroll fallback — must stay below any background shorthand */
+  overscroll-behavior: none; /* Prevent rubber-band bounce revealing the white underlay */
 }
 
 body {
@@ -141,6 +142,31 @@ select:focus {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
+
+/* ---- Download banner animations ---- */
+
+@keyframes bannerSlideUp {
+  0%   { transform: translateY(110%); opacity: 0; }
+  60%  { transform: translateY(-6px); opacity: 1; }
+  80%  { transform: translateY(3px); }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bannerBtnGlow {
+  0%, 100% { box-shadow: 0 4px 14px rgba(255,61,110,0.35); }
+  50%       { box-shadow: 0 4px 28px rgba(255,61,110,0.65), 0 0 48px rgba(255,61,110,0.18); }
+}
+
+@keyframes bannerIconPop {
+  0%,  70%, 100% { transform: scale(1) rotate(0deg); }
+  75%            { transform: scale(1.12) rotate(-6deg); }
+  85%            { transform: scale(1.12) rotate(5deg); }
+  92%            { transform: scale(1.05) rotate(-2deg); }
+}
+
+.banner-enter  { animation: bannerSlideUp 0.55s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+.banner-btn-glow { animation: bannerBtnGlow 2.4s ease-in-out infinite; }
+.banner-icon-pop { animation: bannerIconPop 4s ease-in-out infinite; }
 
 /* ---- Utility animation classes ---- */
 

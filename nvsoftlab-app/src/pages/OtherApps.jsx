@@ -48,7 +48,7 @@ const OTHER_APPS = [
     badge: "bg-amber-500/15 text-amber-300 border-amber-500/20",
     accent: "text-amber-400",
     route: "StrangeTruths",
-    platform: "Coming Soon",
+    platform: "App Store",
     tags: ["Trivia", "Bizarre Facts", "True or False"],
     description:
       "Swipe through genuinely shocking facts and decide - real or fake? The kind of trivia that starts arguments and makes everyone feel smarter (or dumber).",
@@ -78,18 +78,18 @@ export default function OtherApps() {
   useScrollReveal();
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a]">
+    <div className="min-h-screen">
       <div className="max-w-4xl mx-auto px-4 py-12 sm:py-16">
         {/* Header */}
         <div className="text-center mb-14 anim-fade-in-up">
-          <span className="inline-block bg-purple-500/20 border border-purple-500/30 text-purple-300 rounded-full px-4 py-1.5 text-xs font-bold mb-4 tracking-widest uppercase">
+          <span className="inline-block bg-[#FF3D6E]/10 border border-[#FF3D6E]/20 text-[#FF3D6E]/80 rounded-full px-4 py-1.5 text-[11px] font-bold mb-5 tracking-widest uppercase">
             NVSoftLab
           </span>
-          <h1 className="text-3xl sm:text-4xl font-black text-white leading-tight">
+          <h1 className="text-4xl sm:text-5xl font-black text-white leading-tight tracking-tight">
             Our Apps
           </h1>
-          <p className="text-purple-200 text-base sm:text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
-            We're a small indie game studio driven by a single goal: building
+          <p className="text-white/50 text-base sm:text-lg mt-4 max-w-xl mx-auto leading-relaxed">
+            We're a small indie studio driven by one goal: building
             simple, fun apps that bring people together.
           </p>
 
@@ -99,40 +99,13 @@ export default function OtherApps() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-4 py-2 text-white font-bold text-sm hover:bg-white/20 hover:border-white/40 transition-all duration-200"
+              className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-white font-bold text-sm transition-all duration-200 hover:opacity-90 hover:scale-105"
+              style={{ background: "linear-gradient(135deg, #f9a825 0%, #e91e63 50%, #9c27b0 100%)" }}
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
-                <defs>
-                  <linearGradient
-                    id="ig"
-                    x1="0"
-                    y1="24"
-                    x2="24"
-                    y2="0"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop offset="0%" stopColor="#f9a825" />
-                    <stop offset="50%" stopColor="#e91e63" />
-                    <stop offset="100%" stopColor="#9c27b0" />
-                  </linearGradient>
-                </defs>
-                <rect
-                  x="2"
-                  y="2"
-                  width="20"
-                  height="20"
-                  rx="5"
-                  stroke="url(#ig)"
-                  strokeWidth="1.8"
-                />
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="4.5"
-                  stroke="url(#ig)"
-                  strokeWidth="1.8"
-                />
-                <circle cx="17.5" cy="6.5" r="1.2" fill="url(#ig)" />
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" strokeWidth="1.8" />
+                <circle cx="12" cy="12" r="4.5" stroke="white" strokeWidth="1.8" />
+                <circle cx="17.5" cy="6.5" r="1.2" fill="white" />
               </svg>
               Instagram
             </a>
@@ -140,7 +113,7 @@ export default function OtherApps() {
               href={TIKTOK_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-4 py-2 text-white font-bold text-sm hover:bg-white/20 hover:border-white/40 transition-all duration-200"
+              className="inline-flex items-center gap-2 bg-[#111] border border-white/15 rounded-xl px-4 py-2 text-white font-bold text-sm transition-all duration-200 hover:opacity-90 hover:scale-105"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="white">
                 <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.3 6.3 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.14 8.14 0 0 0 4.77 1.52V6.74a4.85 4.85 0 0 1-1-.05z" />
