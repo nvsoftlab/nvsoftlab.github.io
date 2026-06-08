@@ -71,8 +71,8 @@ const OTHER_APPS = [
   },
 ];
 
-const INSTAGRAM_URL = "https://www.instagram.com/nvsoftlab";
-const TIKTOK_URL = "https://www.tiktok.com/@nvsoftlab";
+const INSTAGRAM_URL = "https://www.instagram.com/party_room_app";
+const TIKTOK_URL = "https://www.tiktok.com/@party_room_app";
 
 export default function OtherApps() {
   useScrollReveal();
