@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["AT475QW664.com.nvsoftlab.partydesk"],
+        "components": [
+          { "/": "/redeem" }
+        ]
+      }
+    ]
+  }
+}

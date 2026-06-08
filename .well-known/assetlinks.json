@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.nvsoftlab.partydesk",
+      "sha256_cert_fingerprints": [
+        "3A:C2:03:26:BB:1E:81:FD:ED:24:7F:1B:A1:E0:78:98:E1:85:C1:00:D2:5F:E4:35:4A:B7:B7:48:9A:5F:B8:FA"
+      ]
+    }
+  }
+]
