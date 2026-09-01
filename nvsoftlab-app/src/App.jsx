@@ -19,7 +19,7 @@ import { createPageUrl } from "./utils";
 import useUTMTracking from "./hooks/useUTMTracking";
 
 // Routes rendered without the marketing-site chrome (navbar/footer).
-const BARE_LAYOUT_PATHS = new Set(["/partyroom", "/unspoken"]);
+const BARE_LAYOUT_PATHS = new Set(["/exposed", "/partyroom", "/unspoken"]);
 
 const tagManagerArgs = {
   gtmId: "GTM-WBJFJT34",
@@ -66,6 +66,7 @@ export default function App() {
             <Route path="/strange-truths" element={<StrangeTruths />} />
             <Route path="/have-you-ever" element={<HaveYouEver />} />
             <Route path="/dice-roll" element={<DiceRoll />} />
+            <Route path="/exposed" element={<StoreRedirect appKey="exposedAI" />} />
             <Route path="/partyroom" element={<StoreRedirect appKey="partyRoom" />} />
             <Route path="/unspoken" element={<StoreRedirect appKey="unspoken" />} />
             <Route path="*" element={<PartyDeck />} />

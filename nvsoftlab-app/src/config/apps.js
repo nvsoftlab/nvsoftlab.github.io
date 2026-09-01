@@ -1,5 +1,6 @@
 import partyRoomIcon from "../assets/partyroom.png";
 import unspokenIcon from "../assets/unspoken.jpg";
+import exposedAIIcon from "../assets/exposed-ai.png";
 
 // Single source of truth for app store metadata.
 // TEMPORARY: until each app has its own listing, both routes point at the
@@ -11,6 +12,22 @@ const DEV_PLAY_STORE_URL =
   "https://play.google.com/store/apps/developer?id=nvsoftlab";
 
 export const APPS = {
+  exposedAI: {
+    key: "exposedAI",
+    name: "Exposed AI",
+    tagline: "An ideal start for two.",
+    description:
+      "700+ questions designed to spark intimacy, honest conversations, and unforgettable date nights.",
+    accent: "from-rose-600 to-fuchsia-700",
+    icon: exposedAIIcon,
+    iosAppId: "6751416602",
+    appStoreUrl:
+      "https://apps.apple.com/us/app/exposed-game-have-you-ever/id6751416602",
+    androidPackage: "com.nvsoftlab.haveyouever",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.nvsoftlab.haveyouever",
+    available: true,
+  },
   partyRoom: {
     key: "partyRoom",
     name: "Party Room",

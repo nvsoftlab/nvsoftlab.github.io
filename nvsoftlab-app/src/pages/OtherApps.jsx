@@ -18,7 +18,7 @@ const OTHER_APPS = [
     badge: "bg-rose-500/15 text-rose-300 border-rose-500/20",
     accent: "text-rose-400",
     route: "ExposedAI",
-    platform: "App Store",
+    platform: "App Store & Google Play",
     tags: ["Couples", "700+ Questions", "AI-Powered"],
     description:
       "700+ intimate questions designed to go beyond small talk. Rediscover each other, spark deeper conversations, and turn a quiet evening into something unforgettable.",

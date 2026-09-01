@@ -182,13 +182,13 @@ export default function ExposedAI() {
           <Button
             asChild
             size="lg"
-            disabled
-            className={`bg-gradient-to-r from-fuchsia-700 to-rose-800 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-xl flex items-center gap-3 opacity-60 cursor-not-allowed`}
+            className={`bg-gradient-to-r from-fuchsia-700 to-rose-800 hover:from-fuchsia-800 hover:to-rose-900 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-xl flex items-center gap-3`}
           >
             <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              className="flex items-center gap-3 justify-center pointer-events-none"
+              href="https://play.google.com/store/apps/details?id=com.nvsoftlab.haveyouever"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 justify-center"
             >
               <svg
                 className="w-5 h-5 sm:w-6 sm:h-6"
@@ -198,7 +198,7 @@ export default function ExposedAI() {
                 <path d="M3.609 1.814L13.792 12 3.609 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L13.5 12l4.199-2.491zM5.864 2.658L16.802 8.99l-8.635 8.635-2.303-2.302 8.635-8.635z" />
               </svg>
               <div className="text-left">
-                <div className="text-xs text-fuchsia-200">Coming Soon</div>
+                <div className="text-xs text-fuchsia-200">GET IT ON</div>
                 <div className="text-sm sm:text-base font-bold">
                   Google Play
                 </div>
@@ -211,7 +211,7 @@ export default function ExposedAI() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-rose-200/80 text-sm">
           <div className="flex items-center gap-2">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-            <span className="font-semibold">On App Store</span>
+            <span className="font-semibold">Available Now</span>
           </div>
           <div className="hidden sm:block w-px h-4 bg-rose-500/30" />
           <div className="flex items-center gap-2">
@@ -368,13 +368,13 @@ export default function ExposedAI() {
           <Button
             asChild
             size="lg"
-            disabled
-            className="bg-gradient-to-r from-fuchsia-700 to-rose-800 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-xl flex items-center gap-3 opacity-60 cursor-not-allowed"
+            className="bg-gradient-to-r from-fuchsia-700 to-rose-800 hover:from-fuchsia-800 hover:to-rose-900 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 h-auto text-base sm:text-lg w-full sm:w-auto rounded-xl flex items-center gap-3"
           >
             <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              className="flex items-center gap-3 justify-center pointer-events-none"
+              href="https://play.google.com/store/apps/details?id=com.nvsoftlab.haveyouever"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 justify-center"
             >
               <svg
                 className="w-5 h-5 sm:w-6 sm:h-6"
@@ -384,7 +384,7 @@ export default function ExposedAI() {
                 <path d="M3.609 1.814L13.792 12 3.609 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L13.5 12l4.199-2.491zM5.864 2.658L16.802 8.99l-8.635 8.635-2.303-2.302 8.635-8.635z" />
               </svg>
               <div className="text-left">
-                <div className="text-xs text-fuchsia-200">Coming Soon</div>
+                <div className="text-xs text-fuchsia-200">GET IT ON</div>
                 <div className="text-sm sm:text-base font-bold">
                   Google Play
                 </div>
