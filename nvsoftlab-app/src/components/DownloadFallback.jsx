@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { AppStoreButton, PlayStoreButton } from "./StoreButtons";
 import QRCode from "./QRCode";
 import { getAppStoreLink, getPlayStoreLink } from "../utils/storeUrl";
-import { trackEvent } from "../utils/analytics";
+import { getTrafficAttribution, trackEvent } from "../utils/analytics";
 
 export default function DownloadFallback({ app, search = "" }) {
   const appStoreUrl = getAppStoreLink(app, search);
@@ -99,6 +99,7 @@ function DownloadCard({
       store: kind === "ios" ? "app_store" : "play_store",
       destination: storeHref,
       surface: "fallback_button",
+      ...getTrafficAttribution(window.location.search),
     });
   };
 

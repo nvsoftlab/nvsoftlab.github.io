@@ -1,30 +1,42 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { getApp } from "../config/apps";
 import { detectPlatform, isMobilePlatform } from "../utils/detectPlatform";
 import { buildStoreUrl } from "../utils/storeUrl";
-import { trackEvent } from "../utils/analytics";
+import {
+  getTrafficAttribution,
+  trackEvent,
+  trackEventBeforeNavigation,
+} from "../utils/analytics";
 import DownloadFallback from "../components/DownloadFallback";
 
 export default function StoreRedirect({ appKey }) {
   const app = getApp(appKey);
   const { search } = useLocation();
   const [shouldFallback, setShouldFallback] = useState(false);
+  const redirectHandled = useRef(false);
 
   useEffect(() => {
+    if (redirectHandled.current) return;
+    redirectHandled.current = true;
+
     if (!app) {
       setShouldFallback(true);
       return;
     }
 
     const platform = detectPlatform();
-
-    trackEvent("app_redirect_impression", {
+    const attribution = getTrafficAttribution(search);
+    const analyticsContext = {
       app: app.key,
       app_name: app.name,
       platform,
       available: app.available,
-    });
+      page_path: window.location.pathname,
+      ...attribution,
+    };
+
+    trackEvent("app_redirect_impression", analyticsContext);
 
     if (!app.available) {
       // Until apps are live, never auto-redirect — show the landing page.
@@ -35,14 +47,15 @@ export default function StoreRedirect({ appKey }) {
     if (isMobilePlatform(platform)) {
       const target = buildStoreUrl(app, platform, search);
       if (target) {
-        trackEvent("app_redirect_navigate", {
-          app: app.key,
-          app_name: app.name,
-          platform,
-          destination: target,
-          store: platform === "ios" ? "app_store" : "play_store",
-        });
-        window.location.replace(target);
+        trackEventBeforeNavigation(
+          "app_redirect_navigate",
+          {
+            ...analyticsContext,
+            destination: target,
+            store: platform === "ios" ? "app_store" : "play_store",
+          },
+          () => window.location.replace(target),
+        );
         return;
       }
     }
